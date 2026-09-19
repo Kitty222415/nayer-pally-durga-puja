@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const links = [
@@ -41,12 +42,14 @@ export default function Header() {
     >
       <div className="container-premium flex items-center justify-between gap-4 px-5 py-3 md:py-4">
         <a href="#top" className="group focus-ring flex min-w-0 items-center gap-3 rounded-sm">
-          <span
-            aria-hidden
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold/50 bg-gradient-to-br from-crimson to-royal text-xs font-semibold tracking-wide text-ivory"
-          >
-            NP
-          </span>
+          <Image
+            src="/brand/logo.jpeg"
+            alt="Nayer Pally Sealdah Sarbojanin Durga Puja Committee logo"
+            width={48}
+            height={48}
+            priority
+            className="h-10 w-10 shrink-0 rounded-full object-cover ring-1 ring-gold/40 md:h-12 md:w-12"
+          />
           <span className="min-w-0">
             <span className="font-display block truncate text-sm font-semibold tracking-wide text-ivory md:text-base">
               Nayer Pally Sealdah

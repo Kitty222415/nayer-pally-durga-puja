@@ -46,16 +46,23 @@ Single-page experience with anchored sections:
 2. **About** — committee heritage & organiser
 3. **Puja Days** — Shashthi → Dashami (dates TBA)
 4. **Events & Culture** — including Rath Yatra at Shraddhananda Park
-5. **Gallery** — photo placeholders
+5. **Gallery** — seeded Facebook photos (see `src/data/gallery.json`)
 6. **Sponsors** — reserved sponsor slots
 7. **Volunteer** — seva call-to-action
 8. **Donate / Anjali** — contact-based contributions (no payment gateway)
 9. **Contact** — phone, email, Facebook, location
 10. **Footer**
 
+## Gallery (Facebook photos)
+
+Gallery images in `public/gallery/` are **manually seeded** from publicly visible photos on the [committee Facebook page](https://www.facebook.com/profile.php?id=100083116423356). Captions live in `src/data/gallery.json` (and `public/gallery/manifest.json`).
+
+**There is no live Facebook sync.** Continuous sync needs a Meta Page access token from a page admin. To refresh photos later, see [`scripts/refresh-gallery.md`](scripts/refresh-gallery.md).
+
+Header logo: `public/brand/logo.jpeg`.
+
 ## Placeholders (replace with real assets)
 
-- Gallery tiles (6) — pandal, pratima, Rath Yatra, cultural nights, community, park
 - Sponsor logo slots (6)
 - Map embed — add Google Maps / OpenStreetMap pin when exact pandal location is confirmed
 - Exact Durga Puja calendar dates for the current year

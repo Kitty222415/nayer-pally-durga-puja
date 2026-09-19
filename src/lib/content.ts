@@ -1,0 +1,123 @@
+import siteData from "@/data/site.json";
+import galleryAll from "@/data/gallery.json";
+import year2026 from "@/data/years/2026.json";
+import year2027 from "@/data/years/2027.json";
+
+export type GalleryItem = {
+  src: string;
+  file: string;
+  caption: string;
+  alt: string;
+  year?: number;
+};
+
+export type YearPack = {
+  year: number;
+  bengaliYear: string;
+  status: "published" | "tba";
+  heroBadge: string;
+  about: { eyebrow: string; heading: string; paragraphs: string[] };
+  eventsIntro: string;
+  events: { title: string; blurb: string }[];
+  visitors: { eyebrow: string; heading: string; body: string };
+  englishSchedule: {
+    eyebrow: string;
+    intro: string;
+    footnote: string;
+    days: {
+      bengali: string;
+      name: string;
+      note: string;
+      date: string;
+      highlight?: boolean;
+    }[];
+  };
+  bengaliSchedule: {
+    eyebrow: string;
+    heading: string;
+    intro: string;
+    footnote: string;
+    rows: {
+      tithi: string;
+      banglaDate: string;
+      englishDate: string;
+      detail: string;
+      highlight?: boolean;
+    }[];
+  };
+};
+
+export const site = siteData as {
+  committeeName: string;
+  organiser: string;
+  foundedYear: number;
+  venue: string;
+  addressLine: string;
+  pin: string;
+  phoneDisplay: string;
+  phoneTel: string;
+  email: string;
+  facebookUrl: string;
+  heroGreetingBn: string;
+};
+
+const YEAR_PACKS: Record<number, YearPack> = {
+  2026: year2026 as YearPack,
+  2027: year2027 as YearPack,
+};
+
+export function getTargetPujaYear(now = new Date()): number {
+  const forced = process.env.NEXT_PUBLIC_PUJA_YEAR;
+  if (forced && /^\d{4}$/.test(forced)) return Number(forced);
+  const y = now.getFullYear();
+  return now.getMonth() >= 10 ? y + 1 : y;
+}
+
+export function getAnniversary(year: number): number {
+  return year - site.foundedYear + 1;
+}
+
+export function fillTemplate(
+  text: string,
+  year: number,
+  anniversary: number,
+): string {
+  return text
+    .replaceAll("{year}", String(year))
+    .replaceAll("{anniversary}", String(anniversary));
+}
+
+function latestPublishedYear(): number {
+  const years = Object.values(YEAR_PACKS)
+    .filter((p) => p.status === "published")
+    .map((p) => p.year);
+  return years.length ? Math.max(...years) : 2026;
+}
+
+export function getActiveContent(now = new Date()) {
+  const targetYear = getTargetPujaYear(now);
+  let year = targetYear;
+  let pack = YEAR_PACKS[targetYear];
+  let showingFallback = false;
+
+  if (!pack || pack.status !== "published") {
+    year = latestPublishedYear();
+    pack = YEAR_PACKS[year];
+    showingFallback = targetYear !== year;
+  }
+
+  const anniversary = getAnniversary(year);
+  const tagged = (galleryAll as GalleryItem[]).filter(
+    (g) => !g.year || g.year === year,
+  );
+
+  return {
+    site,
+    year,
+    anniversary,
+    pack,
+    showingFallback,
+    targetYear,
+    gallery: tagged.length ? tagged : (galleryAll as GalleryItem[]),
+  };
+}

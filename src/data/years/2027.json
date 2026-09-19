@@ -1,0 +1,48 @@
+{
+  "year": 2027,
+  "bengaliYear": "১৪৩৪ বঙ্গাব্দ",
+  "status": "tba",
+  "heroBadge": "{anniversary}th Year · Since 1948",
+  "about": {
+    "eyebrow": "Heritage & Community",
+    "heading": "About the Committee",
+    "paragraphs": [
+      "Nayer Pally Sealdah Sarbojanin Durga Puja Committee — organised by Jatio Yuba Sangha — is one of the older Durga Pujas of central Kolkata, founded in 1948. {year} marks our {anniversary}th year of celebration at Shraddhananda Park, Raja Rammohan Sarani, Sealdah.",
+      "Across nearly eight decades, the puja has weathered its share of hurdles — yet it has stood tall every single year, carried forward by the same spirit of community service, culture and togetherness it was founded on.",
+      "Every year, the pandal, the pratima, and the days of celebration are made possible by the generosity of sponsors, the effort of volunteers, and the warmth of everyone who walks through our gates."
+    ]
+  },
+  "eventsIntro": "Culture & Celebration",
+  "events": [
+    {
+      "title": "Rath Yatra & Khuti Puja",
+      "blurb": "A community favourite held annually at Shraddhananda Park, drawing crowds from across Sealdah for the chariot procession. Every year, Khuti Puja — marking the ceremonial start of pandal construction — is performed on this same day."
+    },
+    {
+      "title": "Cultural Nights",
+      "blurb": "Music, dance and performances by local talent through the puja evenings, open to the whole neighbourhood. Line-up announced closer to the festival."
+    },
+    {
+      "title": "Bhog & Community Meals",
+      "blurb": "Shared meals prepared and served to the community across the puja days, a tradition of seva at the heart of our celebration."
+    }
+  ],
+  "visitors": {
+    "eyebrow": "A Special Welcome",
+    "heading": "Durga Puja, Open to the World",
+    "body": "We warmly welcome tourists and visitors from abroad to experience Durga Puja with us — the rituals, the drums, the pandal, and the spirit of the neighbourhood. From Shashthi onward, our international guests are offered a special Bhog of Maa Durga, along with a friendly introduction to each day's customs. Guests from abroad may also offer Anjali to Maa Durga with the committee's guidance — a simple, heartfelt way to take part in the worship."
+  },
+  "englishSchedule": {
+    "eyebrow": "Chaturthi to Dwadashi · {year}",
+    "intro": "Dates for {year} will be announced after the Kolkata Panchang is published.",
+    "footnote": "Schedule to be updated from the official Kolkata Panchang for {year}.",
+    "days": []
+  },
+  "bengaliSchedule": {
+    "eyebrow": "বাংলা নির্ঘণ্ট · ১৪৩৪ বঙ্গাব্দ",
+    "heading": "তিথি অনুসারে দুর্গাপূজা সূচি",
+    "intro": "২০২৭ / ১৪৩৪ বঙ্গাব্দের তিথিভিত্তিক সূচি কলকাতার পঞ্জিকা প্রকাশের পর এখানে যোগ করা হবে।",
+    "footnote": "নতুন নির্ঘণ্ট প্রকাশিত হলে এই অংশ আপডেট করা হবে।",
+    "rows": []
+  }
+}

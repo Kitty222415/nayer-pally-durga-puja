@@ -1,50 +1,28 @@
-const events = [
-  {
-    title: "Rath Yatra & Khuti Puja",
-    blurb:
-      "A community favourite held annually at Shraddhananda Park, drawing crowds from across Sealdah for the chariot procession. Every year, Khuti Puja — marking the ceremonial start of pandal construction — is performed on this same day.",
-    iconBg: "bg-crimson",
-    iconStroke: "#FBF6EC",
-    icon: (
-      <path d="M12 2v20M4 8h16l-2 8H6L4 8Z" />
-    ),
-  },
-  {
-    title: "Cultural Nights",
-    blurb:
-      "Music, dance and performances by local talent through the puja evenings, open to the whole neighbourhood. [Add this year's line-up.]",
-    iconBg: "bg-gold",
-    iconStroke: "#132A52",
-    icon: (
-      <>
-        <path d="M9 18V5l12-2v13" />
-        <circle cx="6" cy="18" r="3" />
-        <circle cx="18" cy="16" r="3" />
-      </>
-    ),
-  },
-  {
-    title: "Bhog & Community Meals",
-    blurb:
-      "Shared meals prepared and served to the community across the puja days, a tradition of seva at the heart of our celebration.",
-    iconBg: "bg-navy",
-    iconStroke: "#FBF6EC",
-    icon: (
-      <path d="M12 21s-7-4.5-9.5-9C.5 8 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8-2.5 4.5-9.5 9-9.5 9Z" />
-    ),
-  },
+import { getActiveContent } from "@/lib/content";
+
+const icons = [
+  <path key="1" d="M12 2v20M4 8h16l-2 8H6L4 8Z" />,
+  <>
+    <path key="a" d="M9 18V5l12-2v13" />
+    <circle key="b" cx="6" cy="18" r="3" />
+    <circle key="c" cx="18" cy="16" r="3" />
+  </>,
+  <path
+    key="3"
+    d="M12 21s-7-4.5-9.5-9C.5 8 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8-2.5 4.5-9.5 9-9.5 9Z"
+  />,
 ];
 
 export default function Events() {
+  const { pack } = getActiveContent();
+  const colors = ["bg-crimson", "bg-gold", "bg-navy"];
+  const strokes = ["#FBF6EC", "#132A52", "#FBF6EC"];
+
   return (
-    <section
-      id="events"
-      className="section-pad bg-cream"
-      aria-labelledby="events-heading"
-    >
+    <section id="events" className="section-pad bg-cream" aria-labelledby="events-heading">
       <div className="container-premium">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow mb-3 text-crimson">Culture &amp; Celebration</p>
+          <p className="eyebrow mb-3 text-crimson">{pack.eventsIntro}</p>
           <h2
             id="events-heading"
             className="font-display text-3xl font-semibold text-navy md:text-4xl"
@@ -52,37 +30,34 @@ export default function Events() {
             Events &amp; Culture
           </h2>
         </div>
-
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {events.map((ev) => (
-            <article
+        <ul className="mt-12 grid gap-6 md:grid-cols-3">
+          {pack.events.map((ev, i) => (
+            <li
               key={ev.title}
-              className="rounded-sm border border-parchment bg-[#FFFDF9] p-7 transition hover:-translate-y-1"
+              className="rounded-sm border border-navy/10 bg-white p-6 shadow-sm"
             >
               <div
-                className={`mb-4 flex h-11 w-11 items-center justify-center rounded-full ${ev.iconBg}`}
-                aria-hidden
+                className={`mb-4 flex h-12 w-12 items-center justify-center rounded-full ${colors[i % 3]}`}
               >
                 <svg
-                  width="20"
-                  height="20"
+                  width="22"
+                  height="22"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke={ev.iconStroke}
+                  stroke={strokes[i % 3]}
                   strokeWidth="1.6"
+                  aria-hidden
                 >
-                  {ev.icon}
+                  {icons[i % 3]}
                 </svg>
               </div>
-              <h3 className="font-display text-xl font-semibold text-navy md:text-[1.4rem]">
+              <h3 className="font-display text-xl font-semibold text-navy">
                 {ev.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#4A3B31] md:text-[0.95rem] md:leading-[1.7]">
-                {ev.blurb}
-              </p>
-            </article>
+              <p className="mt-3 text-sm leading-relaxed text-body">{ev.blurb}</p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

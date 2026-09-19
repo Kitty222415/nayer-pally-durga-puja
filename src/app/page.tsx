@@ -10,6 +10,7 @@ import Sponsors from "@/components/Sponsors";
 import Volunteer from "@/components/Volunteer";
 import Donate from "@/components/Donate";
 import Contact from "@/components/Contact";
+import ContentUpdates from "@/components/ContentUpdates";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
         <Volunteer />
         <Donate />
         <Contact />
+        <ContentUpdates />
       </main>
       <Footer />
     </>

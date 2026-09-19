@@ -1,10 +1,9 @@
 import Image from "next/image";
-import gallery from "@/data/gallery.json";
-
-const FACEBOOK_URL =
-  "https://www.facebook.com/profile.php?id=100083116423356";
+import { getActiveContent } from "@/lib/content";
 
 export default function Gallery() {
+  const { site, year, gallery } = getActiveContent();
+
   return (
     <section
       id="gallery"
@@ -21,11 +20,11 @@ export default function Gallery() {
             Gallery
           </h2>
           <p className="mt-4 text-sm text-muted md:text-base">
-            From our pandal, cultural nights, Rath Yatra, and community
-            gatherings — more photos welcome anytime.
+            Photos from our pandal, cultural nights, Rath Yatra and community
+            gatherings — {year} season.
           </p>
           <p className="mt-2 text-xs uppercase tracking-[0.16em] text-navy/50">
-            {gallery.length} photos
+            {gallery.length} photos · {year}
           </p>
         </div>
 
@@ -52,25 +51,16 @@ export default function Gallery() {
 
         <div className="mt-10 flex flex-col items-center gap-3 text-center">
           <a
-            href={FACEBOOK_URL}
+            href={site.facebookUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="focus-ring inline-flex items-center gap-2 rounded-sm border border-crimson/40 bg-crimson px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-cream shadow-md transition hover:bg-crimson-deep"
           >
             See more on Facebook
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden
-            >
-              <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" />
-            </svg>
           </a>
           <p className="max-w-md text-xs text-muted">
-            Have more photos? Send them anytime — the gallery has no fixed
-            limit and grows as you share.
+            Send new photos anytime — add them under the active year in{" "}
+            <code className="text-navy">src/data/gallery.json</code>.
           </p>
         </div>
       </div>

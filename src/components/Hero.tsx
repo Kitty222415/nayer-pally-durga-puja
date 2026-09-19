@@ -19,7 +19,7 @@ export default function Hero() {
       {/* Soft full-bleed backdrop — the pandal photo you shared */}
       <div className="absolute inset-0">
         <Image
-          src="/brand/maa-durga-hero.jpg"
+          src="/brand/maa-durga-hero-v2.jpg"
           alt=""
           fill
           priority
@@ -29,15 +29,15 @@ export default function Hero() {
         />
         {/* Soft overlays so Maa stays visible but text stays readable */}
         <div
-          className="absolute inset-0 bg-navy/45"
+          className="absolute inset-0 bg-navy/35"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-gradient-to-b from-navy/55 via-navy/30 to-navy/80"
+          className="absolute inset-0 bg-gradient-to-b from-navy/45 via-navy/25 to-navy/75"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-navy/50 via-transparent to-navy/35"
+          className="absolute inset-0 bg-gradient-to-r from-navy/40 via-transparent to-navy/25"
           aria-hidden
         />
         <div

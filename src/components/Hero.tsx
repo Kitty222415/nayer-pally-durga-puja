@@ -109,7 +109,7 @@ export default function Hero() {
             <figure className="relative overflow-hidden rounded-[1rem] border border-gold/50 shadow-[0_25px_60px_rgba(0,0,0,0.45)] ring-1 ring-cream/10">
               <div className="relative aspect-[4/5] w-full">
                 <Image
-                  src="/brand/maa-durga-hero.jpg"
+                  src="/brand/maa-durga-panel.jpg"
                   alt="Blessings of Maa Durga — pratima at our Sealdah pandal"
                   fill
                   priority

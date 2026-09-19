@@ -2,74 +2,36 @@ export default function Donate() {
   return (
     <section
       id="donate"
-      className="section-pad relative overflow-hidden crimson-gradient text-ivory"
+      className="section-pad bg-soft text-center"
       aria-labelledby="donate-heading"
     >
-      <div className="pattern-mandala pointer-events-none absolute inset-0 opacity-30" aria-hidden />
-      <div className="container-premium relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="font-bengali mb-3 text-lg text-gold-light/90">অঞ্জলি</p>
+      <div className="container-premium">
+        <div className="mx-auto max-w-3xl">
+          <p className="eyebrow mb-3 text-crimson">Help Us Grow</p>
           <h2
             id="donate-heading"
-            className="font-display text-3xl font-semibold md:text-4xl"
+            className="font-display text-3xl font-semibold text-navy md:text-4xl"
           >
-            Donate / Offer Anjali
+            Donate &amp; Anjali
           </h2>
-          <div className="mx-auto mt-4 h-px w-20 bg-gold/50" aria-hidden />
-          <p className="mt-6 text-base leading-relaxed text-ivory/80 md:text-lg">
-            Your contribution helps light the pandal, sustain rituals, and welcome
-            every devotee with dignity. Offerings may be made in person during
-            Pujo, or by contacting the committee directly.
+          <p className="mt-6 text-base leading-relaxed text-[#4A3B31] md:text-[1.05rem] md:leading-[1.8]">
+            We are still a small, community-run puja — and we&apos;d love your
+            help to grow it, year on year, into a grand theme puja that does
+            justice to Nayer Pally&apos;s spirit. Every contribution, big or
+            small, goes directly toward the pandal, the pratima, the bhog and
+            the days of celebration.
           </p>
-          <p className="mt-4 text-sm text-ivory/60">
-            Online payment will be shared by the committee when available. We do
-            not process payments on this website.
+          <p className="mt-4 text-base leading-relaxed text-[#4A3B31] md:text-[1.05rem] md:leading-[1.8]">
+            To make a donation or arrange Anjali, please reach out to the
+            committee directly using the contact details below; we do not
+            currently process payments online.
           </p>
-
-          <div className="ornament-border mx-auto mt-10 max-w-lg rounded-sm bg-midnight/30 p-6 text-left backdrop-blur-sm md:p-8">
-            <h3 className="font-display text-xl font-semibold text-gold-light">
-              How to contribute
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm text-ivory/80">
-              <li className="flex gap-3">
-                <span className="text-gold" aria-hidden>
-                  ✦
-                </span>
-                <span>
-                  Call or WhatsApp{" "}
-                  <a
-                    href="tel:+919831593129"
-                    className="focus-ring font-medium text-ivory underline decoration-gold/40 underline-offset-2"
-                  >
-                    +91 98315 93129
-                  </a>
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gold" aria-hidden>
-                  ✦
-                </span>
-                <span>
-                  Email{" "}
-                  <a
-                    href="mailto:jatioyubasanghasealdah@gmail.com"
-                    className="focus-ring font-medium text-ivory underline decoration-gold/40 underline-offset-2 break-all"
-                  >
-                    jatioyubasanghasealdah@gmail.com
-                  </a>
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gold" aria-hidden>
-                  ✦
-                </span>
-                <span>
-                  Visit the pandal at Nayer Pally / Shraddhananda Park during
-                  festival days
-                </span>
-              </li>
-            </ul>
-          </div>
+          <a
+            href="#contact"
+            className="focus-ring mt-9 inline-flex rounded-sm bg-navy px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-cream transition hover:brightness-110"
+          >
+            Contact the Committee
+          </a>
         </div>
       </div>
     </section>

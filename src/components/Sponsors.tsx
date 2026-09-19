@@ -9,48 +9,37 @@ export default function Sponsors() {
     >
       <div className="container-premium">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-crimson">
-            With Gratitude
-          </p>
+          <p className="eyebrow mb-3 text-crimson">With Gratitude</p>
           <h2
             id="sponsors-heading"
-            className="font-display text-3xl font-semibold text-midnight md:text-4xl"
+            className="font-display text-3xl font-semibold text-navy md:text-4xl"
           >
-            Our <span className="gold-text">Sponsors</span>
+            Our Sponsors
           </h2>
-          <p className="mt-4 text-midnight/70">
-            Patron slots for generous supporters of Nayer Pally Sealdah Sarbojanin
-            Durga Puja. Logos and names will appear here once confirmed — we do
-            not list unverified sponsors.
+          <p className="mt-4 text-sm text-muted md:text-base">
+            Sponsor slots reserved — logos to be added
           </p>
         </div>
 
-        <ul className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:gap-6">
+        <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {slots.map((n) => (
             <li
               key={n}
-              className="ornament-border flex aspect-[3/2] flex-col items-center justify-center rounded-sm bg-ivory px-4 text-center"
+              className="flex h-24 items-center justify-center rounded-sm border border-dashed border-[#C7B79A] px-3 text-center text-xs text-[#9C8B76]"
             >
-              <span className="text-[10px] uppercase tracking-[0.22em] text-muted">
-                Sponsor slot {n}
-              </span>
-              <span className="font-display mt-2 text-lg text-midnight/40">
-                Reserved
-              </span>
+              Sponsor {n}
             </li>
           ))}
         </ul>
 
-        <p className="mt-10 text-center text-sm text-midnight/60">
-          Interested in supporting the Pujo?{" "}
+        <div className="mt-10 text-center">
           <a
             href="#contact"
-            className="focus-ring font-medium text-crimson underline decoration-gold/50 underline-offset-4 hover:text-vermilion"
+            className="focus-ring inline-flex rounded-sm border border-crimson px-7 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-crimson transition hover:bg-crimson hover:text-cream"
           >
-            Get in touch
+            Become a Sponsor
           </a>
-          .
-        </p>
+        </div>
       </div>
     </section>
   );

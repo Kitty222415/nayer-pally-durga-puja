@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import PujaDays from "@/components/PujaDays";
 import Events from "@/components/Events";
+import Visitors from "@/components/Visitors";
 import Gallery from "@/components/Gallery";
 import Sponsors from "@/components/Sponsors";
 import Volunteer from "@/components/Volunteer";
@@ -15,7 +16,7 @@ export default function Home() {
     <>
       <a
         href="#main"
-        className="focus-ring sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-gold focus:px-4 focus:py-2 focus:text-midnight"
+        className="focus-ring sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-gold focus:px-4 focus:py-2 focus:text-navy"
       >
         Skip to content
       </a>
@@ -25,6 +26,7 @@ export default function Home() {
         <About />
         <PujaDays />
         <Events />
+        <Visitors />
         <Gallery />
         <Sponsors />
         <Volunteer />

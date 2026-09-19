@@ -7,10 +7,10 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#puja-days", label: "Puja Days" },
   { href: "#events", label: "Events" },
+  { href: "#visitors", label: "For Visitors" },
   { href: "#gallery", label: "Gallery" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#volunteer", label: "Volunteer" },
-  { href: "#donate", label: "Donate" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -36,22 +36,22 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled || open
-          ? "bg-midnight/95 backdrop-blur-md shadow-lg shadow-black/20"
-          : "bg-transparent"
+          ? "bg-navy/95 backdrop-blur-md shadow-lg shadow-black/20"
+          : "bg-navy"
       }`}
     >
-      <div className="container-premium flex items-center justify-between gap-4 px-5 py-3 md:py-4">
+      <div className="container-premium flex items-center justify-between gap-3 px-5 py-3 md:py-3.5">
         <a href="#top" className="group focus-ring flex min-w-0 items-center gap-3 rounded-sm">
           <Image
             src="/brand/logo.jpeg"
             alt="Nayer Pally Sealdah Sarbojanin Durga Puja Committee logo"
-            width={48}
-            height={48}
+            width={56}
+            height={56}
             priority
-            className="h-10 w-10 shrink-0 rounded-full object-cover ring-1 ring-gold/40 md:h-12 md:w-12"
+            className="h-11 w-11 shrink-0 rounded-full object-cover ring-1 ring-gold/40 md:h-14 md:w-14"
           />
-          <span className="min-w-0">
-            <span className="font-display block truncate text-sm font-semibold tracking-wide text-ivory md:text-base">
+          <span className="min-w-0 xl:hidden">
+            <span className="font-display block truncate text-sm font-semibold tracking-wide text-cream md:text-base">
               Nayer Pally Sealdah
             </span>
             <span className="block truncate text-[10px] uppercase tracking-[0.18em] text-gold/90 md:text-[11px]">
@@ -60,41 +60,50 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="focus-ring rounded-sm px-2.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-ivory/80 transition hover:text-gold"
+              className="focus-ring rounded-sm px-2 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-cream/85 transition hover:text-gold"
             >
               {l.label}
             </a>
           ))}
         </nav>
 
-        <button
-          type="button"
-          className="focus-ring flex h-10 w-10 items-center justify-center rounded-sm border border-gold/30 text-ivory lg:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className="sr-only">Menu</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.75" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.75" />
-            )}
-          </svg>
-        </button>
+        <div className="flex items-center gap-2">
+          <a
+            href="#donate"
+            className="focus-ring hidden rounded-sm bg-gold px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy transition hover:brightness-110 sm:inline-flex"
+          >
+            Donate / Anjali
+          </a>
+
+          <button
+            type="button"
+            className="focus-ring flex h-10 w-10 items-center justify-center rounded-sm border border-gold/30 text-cream xl:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className="sr-only">Menu</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.75" />
+              ) : (
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.75" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {open && (
         <nav
           id="mobile-nav"
-          className="border-t border-gold/20 bg-midnight/98 px-5 py-6 lg:hidden"
+          className="border-t border-gold/20 bg-navy/98 px-5 py-6 xl:hidden"
           aria-label="Mobile"
         >
           <ul className="flex flex-col gap-1">
@@ -102,13 +111,22 @@ export default function Header() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="focus-ring block rounded-sm px-3 py-3 text-sm uppercase tracking-[0.16em] text-ivory/90 hover:bg-royal hover:text-gold"
+                  className="focus-ring block rounded-sm px-3 py-3 text-sm uppercase tracking-[0.16em] text-cream/90 hover:bg-royal hover:text-gold"
                   onClick={() => setOpen(false)}
                 >
                   {l.label}
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="#donate"
+                className="focus-ring mt-2 block rounded-sm bg-gold px-3 py-3 text-center text-sm font-semibold uppercase tracking-[0.16em] text-navy"
+                onClick={() => setOpen(false)}
+              >
+                Donate / Anjali
+              </a>
+            </li>
           </ul>
         </nav>
       )}

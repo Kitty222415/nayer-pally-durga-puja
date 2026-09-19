@@ -1,28 +1,55 @@
 const days = [
   {
-    name: "Shashthi",
+    bengali: "চতুর্থী",
+    name: "Chaturthi",
+    note: "Inauguration",
+    date: "Wed, 14 Oct 2026",
+    highlight: true,
+  },
+  {
+    bengali: "পঞ্চমী",
+    name: "Panchami",
+    note: "Pandal opens to all",
+    date: "Fri, 16 Oct 2026",
+  },
+  {
     bengali: "ষষ্ঠী",
-    note: "Bodhon & Amantran — the sacred invitation of Maa Durga.",
+    name: "Shashthi",
+    note: "Bodhon & welcome of the Devi",
+    date: "Sat, 17 Oct 2026",
   },
   {
-    name: "Saptami",
     bengali: "সপ্তমী",
-    note: "Pran Pratishtha — life is invoked into the divine idol.",
+    name: "Saptami",
+    note: "Nabapatrika & morning rites",
+    date: "Sun, 18 Oct 2026",
   },
   {
-    name: "Ashtami",
     bengali: "অষ্টমী",
-    note: "Sandhi Puja & Pushpanjali — the heart of devotion.",
+    name: "Ashtami",
+    note: "Sandhi Puja & Kumari Puja",
+    date: "Mon, 19 Oct 2026",
+    highlight: true,
   },
   {
-    name: "Navami",
     bengali: "নবমী",
-    note: "Maha Navami rituals, cultural programmes & community joy.",
+    name: "Nabami",
+    note: "Maha Nabami Puja & Havan",
+    date: "Tue, 20 Oct 2026",
   },
   {
-    name: "Dashami",
     bengali: "দশমী",
-    note: "বিজয়া দশমী — Sindoor Khela, visarjan & farewell blessings.",
+    name: "Bijoya Dashami",
+    note: "Sindoor Khela & farewell",
+    date: "Wed, 21 Oct 2026",
+    highlight: true,
+  },
+  {
+    bengali: "দ্বাদশী",
+    name: "Dwadashi",
+    note: "Immersion",
+    date: "Thu, 22 Oct 2026",
+    highlight: true,
   },
 ];
 
@@ -30,53 +57,58 @@ export default function PujaDays() {
   return (
     <section
       id="puja-days"
-      className="section-pad relative overflow-hidden bg-cream"
+      className="section-pad bg-navy text-cream"
       aria-labelledby="puja-days-heading"
     >
-      <div className="pattern-mandala pointer-events-none absolute inset-0 opacity-60" aria-hidden />
-      <div className="container-premium relative">
+      <div className="container-premium">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-crimson">
-            The Sacred Five Days
-          </p>
+          <p className="eyebrow mb-3 text-gold">Chaturthi to Dwadashi · 2026</p>
           <h2
             id="puja-days-heading"
-            className="font-display text-3xl font-semibold text-midnight md:text-4xl"
+            className="font-display text-3xl font-semibold text-cream md:text-4xl"
           >
-            Durga Puja <span className="gold-text">Mahotsav</span>
+            Puja Days
           </h2>
-          <p className="mt-4 text-base text-midnight/70">
-            From Shashthi to Dashami — each day unfolds with ritual, music, and
-            community spirit. Exact dates for the upcoming Pujo will be announced
-            here.
-          </p>
-          <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory/80 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-gold-antique">
-            <span aria-hidden>●</span> Dates TBA
+          <p className="mt-4 text-sm text-[#B9AFA3] md:text-base">
+            Inauguration on Chaturthi · Immersion on Dwadashi, following the
+            Panchang tithi calendar
           </p>
         </div>
 
-        <ol className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          {days.map((day, i) => (
+        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {days.map((day) => (
             <li
               key={day.name}
-              className="ornament-border group relative flex flex-col rounded-sm bg-ivory p-5 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-crimson/10"
+              className={`rounded-sm border px-3 py-5 text-center transition hover:-translate-y-0.5 ${
+                day.highlight
+                  ? "border-gold bg-cream/[0.06]"
+                  : "border-gold/35 bg-cream/[0.05]"
+              }`}
             >
-              <span className="font-display text-4xl font-semibold text-gold/40 transition group-hover:text-gold/70">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="font-display mt-3 text-xl font-semibold text-midnight">
+              <p className="font-bengali text-lg font-semibold text-gold sm:text-xl">
+                {day.bengali}
+              </p>
+              <h3 className="font-display mt-1 text-base font-semibold text-cream sm:text-lg">
                 {day.name}
               </h3>
-              <p className="font-bengali mt-1 text-sm text-crimson">{day.bengali}</p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-midnight/65">
+              <p
+                className={`mt-1.5 text-[11px] ${
+                  day.note === "Inauguration" || day.note === "Immersion"
+                    ? "font-semibold uppercase tracking-[0.12em] text-gold"
+                    : "text-[#B9AFA3]"
+                }`}
+              >
                 {day.note}
               </p>
-              <p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-muted">
-                Schedule TBA
-              </p>
+              <p className="mt-1.5 text-xs text-[#B9AFA3]">{day.date}</p>
             </li>
           ))}
         </ol>
+
+        <p className="mt-8 text-center text-xs text-muted">
+          Dates follow the 2026 Panchang (Ashwin Shukla Paksha); please confirm
+          final timings closer to the festival.
+        </p>
       </div>
     </section>
   );

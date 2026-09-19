@@ -5,65 +5,65 @@ export default function Hero() {
       className="relative flex min-h-[100svh] items-center overflow-hidden midnight-gradient"
       aria-labelledby="hero-heading"
     >
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40"
+      <svg
+        className="pointer-events-none absolute left-6 top-24 opacity-[0.18] sm:left-12 sm:top-28 md:left-16"
+        width="180"
+        height="180"
+        viewBox="0 0 220 220"
+        fill="none"
         aria-hidden
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 50% at 50% 20%, rgba(201,162,39,0.18), transparent 55%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(155,27,46,0.35), transparent 50%), radial-gradient(ellipse 50% 35% at 10% 70%, rgba(26,39,68,0.8), transparent 45%)",
-        }}
-      />
-      <div className="pattern-mandala pointer-events-none absolute inset-0 opacity-50" aria-hidden />
+      >
+        <circle cx="110" cy="110" r="100" stroke="#C9A227" strokeWidth="1" />
+        <circle cx="110" cy="110" r="70" stroke="#C9A227" strokeWidth="1" />
+      </svg>
+      <svg
+        className="pointer-events-none absolute bottom-16 right-8 opacity-[0.16] sm:bottom-20 sm:right-16 md:right-20"
+        width="200"
+        height="200"
+        viewBox="0 0 260 260"
+        fill="none"
+        aria-hidden
+      >
+        <circle cx="130" cy="130" r="120" stroke="#7A1420" strokeWidth="1" />
+        <circle cx="130" cy="130" r="86" stroke="#7A1420" strokeWidth="1" />
+      </svg>
 
       <div className="container-premium relative z-10 section-pad pt-28 md:pt-32">
         <div className="mx-auto max-w-4xl text-center fade-up">
-          <p className="font-bengali mb-4 text-lg text-gold-light/90 md:text-xl">
+          <p className="font-bengali mb-4 text-3xl font-semibold text-gold sm:text-4xl md:text-[2.75rem]">
             শুভ দুর্গাপূজা
           </p>
-          <div className="mx-auto mb-6 flex items-center justify-center gap-3" aria-hidden>
-            <span className="h-px w-12 bg-gradient-to-r from-transparent to-gold/70" />
-            <span className="text-gold text-sm">✦</span>
-            <span className="h-px w-12 bg-gradient-to-l from-transparent to-gold/70" />
+          <div className="mb-6 inline-flex items-center rounded-full border border-gold px-5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-gold md:text-xs">
+            79th Year · Since 1948
           </div>
-          <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.28em] text-gold/90 md:text-xs">
-            Organised by Jatio Yuba Sangha
-          </p>
           <h1
             id="hero-heading"
-            className="font-display text-balance text-3xl font-semibold leading-[1.15] text-ivory sm:text-4xl md:text-5xl lg:text-[3.35rem]"
+            className="font-display text-balance text-3xl font-semibold leading-[1.12] text-cream sm:text-4xl md:text-5xl lg:text-[3.75rem]"
           >
-            Nayer Pally Sealdah Sarbojanin{" "}
-            <span className="shimmer-gold">Durga Puja</span> Committee
+            Nayer Pally Sealdah Sarbojanin Durga Puja Committee
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base font-light leading-relaxed text-ivory/75 md:text-lg">
-            A sacred celebration of devotion, culture, and community in the heart of
-            Sealdah — where tradition meets festive splendour at Shraddhananda Park,
-            Kolkata.
+          <p className="mt-5 text-base font-medium tracking-wide text-gold sm:text-lg md:text-[1.15rem]">
+            Organised by Jatio Yuba Sangha
+          </p>
+          <p className="mt-3 text-sm tracking-wide text-[#D8CFC4] sm:text-base">
+            Shraddhananda Park · Raja Rammohan Sarani, Sealdah, Kolkata · PIN 700009
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#puja-days"
-              className="focus-ring gold-gradient inline-flex items-center rounded-sm px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-midnight shadow-lg shadow-black/30 transition hover:brightness-110"
+              className="focus-ring inline-flex items-center rounded-sm bg-crimson px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-cream shadow-lg shadow-black/25 transition hover:bg-crimson-deep"
             >
-              Explore Puja Days
+              Puja Schedule
             </a>
             <a
-              href="#donate"
-              className="focus-ring inline-flex items-center rounded-sm border border-gold/50 bg-transparent px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-gold transition hover:bg-gold/10"
+              href="#contact"
+              className="focus-ring inline-flex items-center rounded-sm border border-gold bg-transparent px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold transition hover:bg-gold/10"
             >
-              Offer Anjali
+              Get in Touch
             </a>
           </div>
-          <p className="mt-12 text-[11px] uppercase tracking-[0.22em] text-ivory/45">
-            Nayer Pally · Sealdah · Kolkata 700009
-          </p>
         </div>
       </div>
-
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ivory to-transparent"
-        aria-hidden
-      />
     </section>
   );
 }

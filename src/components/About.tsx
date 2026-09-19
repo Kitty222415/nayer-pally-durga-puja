@@ -1,91 +1,56 @@
+const stats = [
+  { value: "79th", label: "Year (2026)" },
+  { value: "1948", label: "Founded" },
+  { value: "Central", label: "Kolkata" },
+];
+
 export default function About() {
   return (
-    <section id="about" className="section-pad bg-ivory" aria-labelledby="about-heading">
+    <section id="about" className="section-pad bg-cream" aria-labelledby="about-heading">
       <div className="container-premium">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-crimson">
-              Our Heritage
-            </p>
+            <p className="eyebrow mb-3 text-crimson">Heritage &amp; Community</p>
             <h2
               id="about-heading"
-              className="font-display text-3xl font-semibold text-midnight md:text-4xl"
+              className="font-display text-3xl font-semibold text-navy md:text-4xl"
             >
-              A Sarbojanin celebration{" "}
-              <span className="gold-text">rooted in community</span>
+              About the Committee
             </h2>
-            <div className="mt-4 h-px w-20 bg-gradient-to-r from-gold to-transparent" aria-hidden />
-            <p className="mt-6 text-base leading-relaxed text-midnight/75 md:text-lg">
-              <strong className="font-medium text-midnight">
-                Nayer Pally Sealdah Sarbojanin Durga Puja Committee – Jatio Yuba Sangha
-              </strong>{" "}
-              brings together devotees, neighbours, and well-wishers for one of
-              Kolkata&apos;s cherished community Pujos. Organised by{" "}
-              <strong className="font-medium text-crimson">Jatio Yuba Sangha</strong>,
-              our celebration honours Maa Durga with reverence, artistry, and
-              open-hearted hospitality.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-midnight/75">
-              From the glow of the pandal to the rhythm of dhaak and the warmth of
-              shared prasad, every moment is crafted for the people of Nayer Pally,
-              Sealdah, and beyond — a true <em>sarbojanin</em> festival for all.
-            </p>
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-                { label: "Organiser", value: "Jatio Yuba Sangha" },
-                { label: "Locality", value: "Nayer Pally / Sealdah" },
-                { label: "City", value: "Kolkata, West Bengal" },
-                { label: "PIN", value: "700009" },
-              ].map((item) => (
-                <li
-                  key={item.label}
-                  className="ornament-border rounded-sm bg-cream/60 px-4 py-3"
-                >
-                  <span className="block text-[10px] uppercase tracking-[0.2em] text-muted">
-                    {item.label}
-                  </span>
-                  <span className="mt-1 block font-display text-lg font-semibold text-midnight">
-                    {item.value}
-                  </span>
-                </li>
+            <div className="mt-6 h-0.5 w-[70px] bg-gold" aria-hidden />
+            <div className="mt-8 flex flex-wrap gap-8">
+              {stats.map((s) => (
+                <div key={s.label}>
+                  <p className="font-display text-3xl font-bold text-crimson md:text-[2rem]">
+                    {s.value}
+                  </p>
+                  <p className="mt-0.5 text-[11px] uppercase tracking-[0.14em] text-muted">
+                    {s.label}
+                  </p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
-          <div className="relative">
-            <div className="ornament-border relative overflow-hidden rounded-sm bg-midnight aspect-[4/5] sm:aspect-[5/6]">
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(160deg, #1a2744 0%, #6b0f1c 50%, #9b1b2e 100%)",
-                }}
-              />
-              <div className="pattern-mandala absolute inset-0 opacity-40" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                <span className="font-bengali text-2xl text-gold-light md:text-3xl">
-                  জয় মা দুর্গা
-                </span>
-                <div className="my-6 h-px w-16 bg-gold/60" aria-hidden />
-                <p className="font-display text-xl font-medium leading-snug text-ivory md:text-2xl">
-                  Devotion · Culture · Community
-                </p>
-                <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory/65">
-                  Celebrating the triumph of good over evil with grace, music, and
-                  shared joy — year after year in Sealdah.
-                </p>
-                <div
-                  className="mt-8 flex h-20 w-20 items-center justify-center rounded-full border-2 border-gold/50 bg-gradient-to-br from-crimson to-royal"
-                  aria-hidden
-                >
-                  <span className="font-display text-2xl text-gold-light">॥</span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-sm border border-gold/30 bg-gold/5"
-              aria-hidden
-            />
+          <div className="space-y-5 text-base leading-[1.85] text-body md:text-[1.05rem]">
+            <p>
+              Nayer Pally Sealdah Sarbojanin Durga Puja Committee — organised by
+              Jatio Yuba Sangha — is one of the older Durga Pujas of central
+              Kolkata, founded in 1948. 2026 marks our{" "}
+              <strong className="font-semibold text-crimson">79th year</strong> of
+              celebration at Shraddhananda Park, Raja Rammohan Sarani, Sealdah.
+            </p>
+            <p>
+              Across nearly eight decades, the puja has weathered its share of
+              hurdles — yet it has stood tall every single year, carried forward
+              by the same spirit of community service, culture and togetherness
+              it was founded on.
+            </p>
+            <p className="font-medium text-navy">
+              Every year, the pandal, the pratima, and the days of celebration
+              are made possible by the generosity of sponsors, the effort of
+              volunteers, and the warmth of everyone who walks through our gates.
+            </p>
           </div>
         </div>
       </div>

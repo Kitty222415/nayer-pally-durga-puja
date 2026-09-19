@@ -10,19 +10,20 @@ const days = [
     bengali: "পঞ্চমী",
     name: "Panchami",
     note: "Pandal opens to all",
-    date: "Fri, 16 Oct 2026",
+    date: "Thu, 15 Oct 2026",
   },
   {
     bengali: "ষষ্ঠী",
     name: "Shashthi",
     note: "Bodhon & welcome of the Devi",
-    date: "Sat, 17 Oct 2026",
+    date: "Fri, 16 Oct 2026",
+    highlight: true,
   },
   {
     bengali: "সপ্তমী",
     name: "Saptami",
-    note: "Nabapatrika & morning rites",
-    date: "Sun, 18 Oct 2026",
+    note: "Nabapatrika & morning rites (continues 18 Oct)",
+    date: "Sat, 17 Oct 2026",
   },
   {
     bengali: "অষ্টমী",
@@ -48,7 +49,7 @@ const days = [
     bengali: "দ্বাদশী",
     name: "Dwadashi",
     note: "Immersion",
-    date: "Thu, 22 Oct 2026",
+    date: "Fri, 23 Oct 2026",
     highlight: true,
   },
 ];
@@ -71,7 +72,7 @@ export default function PujaDays() {
           </h2>
           <p className="mt-4 text-sm text-[#B9AFA3] md:text-base">
             Inauguration on Chaturthi · Immersion on Dwadashi, following the
-            Panchang tithi calendar
+            Kolkata Panchang for 2026 (including double Saptami)
           </p>
         </div>
 
@@ -106,8 +107,8 @@ export default function PujaDays() {
         </ol>
 
         <p className="mt-8 text-center text-xs text-muted">
-          Dates follow the 2026 Panchang (Ashwin Shukla Paksha); please confirm
-          final timings closer to the festival.
+          Dates follow the 2026 Kolkata Panchang (Ashwin–Kartik); Saptami spans
+          17–18 Oct. Please confirm final ritual timings closer to the festival.
         </p>
       </div>
     </section>

@@ -12,7 +12,7 @@ export default function Donate() {
             id="donate-heading"
             className="font-display text-3xl font-semibold text-navy md:text-4xl"
           >
-            Donate &amp; Anjali
+            Donate
           </h2>
           <p className="mt-6 text-base leading-relaxed text-[#4A3B31] md:text-[1.05rem] md:leading-[1.8]">
             We are still a small, community-run puja — and we&apos;d love your
@@ -22,9 +22,9 @@ export default function Donate() {
             the days of celebration.
           </p>
           <p className="mt-4 text-base leading-relaxed text-[#4A3B31] md:text-[1.05rem] md:leading-[1.8]">
-            To make a donation or arrange Anjali, please reach out to the
-            committee directly using the contact details below; we do not
-            currently process payments online.
+            To make a donation, please reach out to the committee directly using
+            the contact details below; we do not currently process payments
+            online.
           </p>
           <a
             href="#contact"

@@ -66,7 +66,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#donate" className="focus-ring rounded-sm hover:text-gold">
-                  Donate / Anjali
+                  Donate
                 </a>
               </li>
             </ul>
@@ -78,8 +78,8 @@ export default function Footer() {
             </p>
             <ul className="space-y-2 text-sm leading-relaxed">
               <li>
-                <a href="tel:+916291439316" className="focus-ring rounded-sm hover:text-gold">
-                  +91 62914 39316
+                <a href="tel:+919830945325" className="focus-ring rounded-sm hover:text-gold">
+                  +91 98309 45325
                 </a>
               </li>
               <li>

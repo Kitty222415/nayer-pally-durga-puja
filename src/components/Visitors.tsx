@@ -37,6 +37,10 @@ export default function Visitors() {
               spirit of the neighbourhood. From Shashthi onward, our
               international guests are offered a special Bhog of Maa Durga,
               along with a friendly introduction to each day&apos;s customs.
+              Guests from abroad may also offer{" "}
+              <strong className="font-semibold text-navy">Anjali</strong> to
+              Maa Durga with the committee&apos;s guidance — a simple, heartfelt
+              way to take part in the worship.
             </p>
             <a
               href="#contact"

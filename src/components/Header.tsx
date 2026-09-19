@@ -77,7 +77,7 @@ export default function Header() {
             href="#donate"
             className="focus-ring hidden rounded-sm bg-gold px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy transition hover:brightness-110 sm:inline-flex"
           >
-            Donate / Anjali
+            Donate
           </a>
 
           <button
@@ -124,7 +124,7 @@ export default function Header() {
                 className="focus-ring mt-2 block rounded-sm bg-gold px-3 py-3 text-center text-sm font-semibold uppercase tracking-[0.16em] text-navy"
                 onClick={() => setOpen(false)}
               >
-                Donate / Anjali
+                Donate
               </a>
             </li>
           </ul>

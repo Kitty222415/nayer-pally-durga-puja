@@ -101,7 +101,7 @@ export default function Hero() {
           </div>
 
           {/* Crisp high-quality right panel — no haze on the photo */}
-          <div className="relative mx-auto w-full max-w-md fade-up lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-lg fade-up lg:max-w-none">
             <div
               className="pointer-events-none absolute -inset-2 rounded-[1.35rem] bg-gradient-to-br from-gold/60 via-gold/20 to-crimson/30 opacity-80"
               aria-hidden
@@ -109,17 +109,17 @@ export default function Hero() {
             <figure className="relative overflow-hidden rounded-[1rem] border-2 border-gold/70 bg-navy shadow-[0_28px_64px_rgba(0,0,0,0.5)]">
               <div className="relative aspect-[4/5] w-full">
                 <Image
-                  src="/brand/maa-durga-face.jpg"
+                  src="/brand/maa-durga-face.png"
                   alt="Close portrait of Maa Durga’s face from our Sealdah pandal"
                   fill
                   priority
                   quality={100}
                   unoptimized
                   sizes="(max-width: 1024px) 92vw, 440px"
-                  className="object-cover object-center"
+                  className="object-cover object-[center_35%]"
                 />
                 <div
-                  className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/60 via-navy/20 to-transparent px-5 pb-5 pt-20"
+                  className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/45 via-transparent to-transparent px-5 pb-5 pt-16"
                   aria-hidden
                 />
               </div>

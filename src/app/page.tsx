@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import PujaDays from "@/components/PujaDays";
+import BengaliSchedule from "@/components/BengaliSchedule";
 import Events from "@/components/Events";
 import Visitors from "@/components/Visitors";
 import Gallery from "@/components/Gallery";
@@ -25,6 +26,7 @@ export default function Home() {
         <Hero />
         <About />
         <PujaDays />
+        <BengaliSchedule />
         <Events />
         <Visitors />
         <Gallery />

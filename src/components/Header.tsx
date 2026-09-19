@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "#about", label: "About" },
   { href: "#puja-days", label: "Puja Days" },
+  { href: "#bangla-nirghanta", label: "বাংলা সূচি" },
   { href: "#events", label: "Events" },
   { href: "#visitors", label: "For Visitors" },
   { href: "#gallery", label: "Gallery" },

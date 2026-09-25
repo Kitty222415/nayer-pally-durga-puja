@@ -94,8 +94,8 @@
     ]
   },
   "englishSchedule": {
-    "eyebrow": "Chaturthi to Dwadashi · {year}",
-    "intro": "Inauguration on Chaturthi · Immersion on Dwadashi, following the Kolkata Panchang for {year} (including double Saptami)",
+    "eyebrow": "Chaturthi to Ekadashi · {year}",
+    "intro": "Inauguration on Chaturthi · Immersion on Ekadashi (Thu, 22 Oct), following the Kolkata Panchang for {year} (including double Saptami)",
     "footnote": "Dates follow the {year} Kolkata Panchang (Ashwin–Kartik); Saptami spans 17–18 Oct. Please confirm final ritual timings closer to the festival.",
     "days": [
       {
@@ -148,10 +148,10 @@
         "highlight": true
       },
       {
-        "bengali": "দ্বাদশী",
-        "name": "Dwadashi",
+        "bengali": "একাদশী",
+        "name": "Ekadashi",
         "note": "Immersion",
-        "date": "Fri, 23 Oct 2026",
+        "date": "Thu, 22 Oct 2026",
         "highlight": true
       }
     ]
@@ -159,7 +159,7 @@
   "bengaliSchedule": {
     "eyebrow": "বাংলা নির্ঘণ্ট · ১৪৩৩ বঙ্গাব্দ",
     "heading": "তিথি অনুসারে দুর্গাপূজা সূচি",
-    "intro": "চলতি বছরের (২০২৬ / ১৪৩৩ বঙ্গাব্দ) কলকাতার পঞ্জিকা অনুযায়ী তিথিভিত্তিক সূচি। উদ্বোধন চতুর্থীতে ও বিসর্জন দ্বাদশীতে — আমাদের কমিটির রীতি অনুসারে।",
+    "intro": "চলতি বছরের (২০২৬ / ১৪৩৩ বঙ্গাব্দ) কলকাতার পঞ্জিকা অনুযায়ী তিথিভিত্তিক সূচি। উদ্বোধন চতুর্থীতে ও বিসর্জন একাদশীতে (২২ অক্টোবর, বৃহস্পতিবার) — আমাদের কমিটির রীতি অনুসারে।",
     "footnote": "সূত্র: কলকাতার প্রচলিত পঞ্জিকা / নির্ঘণ্ট ১৪৩৩। সন্ধিপূজার সঠিক সময় ও স্থানীয় আচার পূজার কাছাকাছি সময়ে পুরোহিত ও কমিটির ঘোষণা অনুসারে নিশ্চিত করুন।",
     "rows": [
       {
@@ -215,9 +215,9 @@
         "highlight": true
       },
       {
-        "tithi": "দ্বাদশী",
-        "banglaDate": "৫ কার্তিক",
-        "englishDate": "২৩ অক্টোবর ২০২৬, শুক্রবার",
+        "tithi": "একাদশী — বিসর্জন",
+        "banglaDate": "৪ কার্তিক",
+        "englishDate": "২২ অক্টোবর ২০২৬, বৃহস্পতিবার",
         "detail": "প্রতিমা বিসর্জন — কমিটির নির্ধারিত বিসর্জন দিবস।",
         "highlight": true
       }

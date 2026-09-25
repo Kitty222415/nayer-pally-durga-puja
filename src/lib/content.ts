@@ -14,6 +14,8 @@ export type GalleryItem = {
 export type Testimonial = {
   /** true while the card still holds placeholder text — replace with a real quote */
   placeholder?: boolean;
+  /** Photo path under public/testimonials/ (e.g. "/testimonials/rina-das.jpg"). Empty → generic avatar. */
+  photo?: string;
   quote: string;
   name: string;
   detail?: string;

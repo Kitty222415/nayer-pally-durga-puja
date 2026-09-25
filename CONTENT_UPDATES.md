@@ -25,3 +25,26 @@ The website picks the **active Puja year** automatically:
 4. **Force year** — `NEXT_PUBLIC_PUJA_YEAR=2027` in `.env.local`.
 
 Until a new year is `published`, the site keeps showing the latest published year and notes that the next season is TBA.
+
+## Adding a testimonial (with photo)
+
+Testimonials live in `src/data/years/YYYY.json` → `testimonials.items` and scroll automatically in a carousel (add as many as you like).
+
+1. Put the person's photo (square works best, e.g. 400×400 JPG/PNG) in `public/testimonials/`, e.g. `public/testimonials/rina-das.jpg`. Only use a photo the person has agreed to share.
+2. Replace one of the placeholder items (or add a new one) like this:
+
+```json
+{
+  "placeholder": false,
+  "photo": "/testimonials/rina-das.jpg",
+  "quote": "Short real quote in their own words.",
+  "name": "Rina Das",
+  "detail": "Visitor from Howrah",
+  "source": "Facebook comment, Oct 2026",
+  "sourceUrl": "https://www.facebook.com/..."
+}
+```
+
+- Leave `"photo": ""` to show the generic avatar instead.
+- `source` / `sourceUrl` are optional; remove all items with `"placeholder": true` once real quotes are in.
+- Only publish real quotes from real people, with their permission.

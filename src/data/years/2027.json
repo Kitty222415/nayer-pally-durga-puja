@@ -39,24 +39,54 @@
     "items": [
       {
         "placeholder": true,
+        "photo": "/testimonials/placeholder-avatar.svg",
         "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name",
+        "name": "Visitor name 1",
         "detail": "City / relation to the puja",
         "source": "",
         "sourceUrl": ""
       },
       {
         "placeholder": true,
+        "photo": "/testimonials/placeholder-avatar.svg",
         "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name",
+        "name": "Visitor name 2",
         "detail": "City / relation to the puja",
         "source": "",
         "sourceUrl": ""
       },
       {
         "placeholder": true,
+        "photo": "/testimonials/placeholder-avatar.svg",
         "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name",
+        "name": "Visitor name 3",
+        "detail": "City / relation to the puja",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "placeholder": true,
+        "photo": "/testimonials/placeholder-avatar.svg",
+        "quote": "Your testimonial here — replace with a real quote",
+        "name": "Visitor name 4",
+        "detail": "City / relation to the puja",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "placeholder": true,
+        "photo": "/testimonials/placeholder-avatar.svg",
+        "quote": "Your testimonial here — replace with a real quote",
+        "name": "Visitor name 5",
+        "detail": "City / relation to the puja",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "placeholder": true,
+        "photo": "/testimonials/placeholder-avatar.svg",
+        "quote": "Your testimonial here — replace with a real quote",
+        "name": "Visitor name 6",
         "detail": "City / relation to the puja",
         "source": "",
         "sourceUrl": ""

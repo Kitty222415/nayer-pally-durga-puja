@@ -130,3 +130,12 @@ body {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
+
+/* Testimonials carousel: hide scrollbar but keep swipe / scroll-snap */
+.testimonial-track {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.testimonial-track::-webkit-scrollbar {
+  display: none;
+}

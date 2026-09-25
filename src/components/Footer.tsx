@@ -1,23 +1,52 @@
 import Image from "next/image";
+import { getActiveContent } from "@/lib/content";
+import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
+  const { site } = getActiveContent();
   return (
     <footer className="bg-footer text-[#B9AFA3]">
       <div className="container-premium section-pad !py-14 md:!py-16">
         <div className="flex flex-col gap-6 border-b border-gold/20 pb-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="/brand/logo.jpeg"
+              src="/brand/nayer-pally-logo-hd-2026.png"
               alt=""
-              width={44}
-              height={44}
-              className="h-11 w-11 rounded-full object-cover"
+              width={1724}
+              height={1724}
+              quality={100}
+              sizes="44px"
+              className="h-11 w-11 object-contain"
             />
             <span className="font-display text-lg font-semibold leading-snug text-cream md:text-[1.15rem]">
               Nayer Pally Sealdah Sarbojanin Durga Puja Committee
             </span>
           </div>
-          <p className="text-sm tracking-wide">Jatio Yuba Sangha</p>
+          <div className="flex items-center gap-4">
+            <p className="text-sm tracking-wide">Jatio Yuba Sangha</p>
+            <div className="flex items-center gap-2">
+              <a
+                href={site.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-gold/30 text-cream/80 transition hover:border-gold hover:text-gold"
+              >
+                <FacebookIcon className="h-4 w-4" />
+              </a>
+              {site.instagram && (
+                <a
+                  href={site.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-gold/30 text-cream/80 transition hover:border-gold hover:text-gold"
+                >
+                  <InstagramIcon className="h-4 w-4" />
+                </a>
+              )}
+            </div>
+          </div>
         </div>
 
         <div className="mt-9 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">

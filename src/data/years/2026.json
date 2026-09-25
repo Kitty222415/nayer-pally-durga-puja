@@ -32,6 +32,37 @@
     "heading": "Durga Puja, Open to the World",
     "body": "We warmly welcome tourists and visitors from abroad to experience Durga Puja with us — the rituals, the drums, the pandal, and the spirit of the neighbourhood. From Shashthi onward, our international guests are offered a special Bhog of Maa Durga, along with a friendly introduction to each day's customs. Guests from abroad may also offer Anjali to Maa Durga with the committee's guidance — a simple, heartfelt way to take part in the worship."
   },
+  "testimonials": {
+    "eyebrow": "Voices from the Pandal",
+    "heading": "What Visitors Say",
+    "intro": "Words from devotees, neighbours and guests who have celebrated with us.",
+    "items": [
+      {
+        "placeholder": true,
+        "quote": "Your testimonial here — replace with a real quote",
+        "name": "Visitor name",
+        "detail": "City / relation to the puja",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "placeholder": true,
+        "quote": "Your testimonial here — replace with a real quote",
+        "name": "Visitor name",
+        "detail": "City / relation to the puja",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "placeholder": true,
+        "quote": "Your testimonial here — replace with a real quote",
+        "name": "Visitor name",
+        "detail": "City / relation to the puja",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ]
+  },
   "englishSchedule": {
     "eyebrow": "Chaturthi to Dwadashi · {year}",
     "intro": "Inauguration on Chaturthi · Immersion on Dwadashi, following the Kolkata Panchang for {year} (including double Saptami)",

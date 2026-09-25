@@ -9,6 +9,7 @@ const links = [
   { href: "#bangla-nirghanta", label: "বাংলা সূচি" },
   { href: "#events", label: "Events" },
   { href: "#visitors", label: "For Visitors" },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#gallery", label: "Gallery" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#volunteer", label: "Volunteer" },
@@ -44,12 +45,14 @@ export default function Header() {
       <div className="container-premium flex items-center justify-between gap-3 px-5 py-3 md:py-3.5">
         <a href="#top" className="group focus-ring flex min-w-0 items-center gap-3 rounded-sm">
           <Image
-            src="/brand/logo.jpeg"
+            src="/brand/nayer-pally-logo-hd-2026.png"
             alt="Nayer Pally Sealdah Sarbojanin Durga Puja Committee logo"
-            width={56}
-            height={56}
+            width={1724}
+            height={1724}
             priority
-            className="h-11 w-11 shrink-0 rounded-full object-cover ring-1 ring-gold/40 md:h-14 md:w-14"
+            quality={100}
+            sizes="(min-width: 768px) 56px, 44px"
+            className="h-11 w-11 shrink-0 object-contain md:h-14 md:w-14"
           />
           <span className="min-w-0 xl:hidden">
             <span className="font-display block truncate text-sm font-semibold tracking-wide text-cream md:text-base">

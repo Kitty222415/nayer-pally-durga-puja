@@ -9,5 +9,26 @@
   "phoneTel": "+919830945325",
   "email": "jatioyubasanghasealdah@gmail.com",
   "facebookUrl": "https://www.facebook.com/profile.php?id=100083116423356",
-  "heroGreetingBn": "শুভ দুর্গাপূজা"
+  "instagram": "",
+  "heroGreetingBn": "শুভ দুর্গাপূজা",
+  "sponsors": [
+    {
+      "name": "Pepsi",
+      "logo": "/sponsors/pepsi-logo.svg",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "name": "Britannia",
+      "logo": "/sponsors/britannia-logo.svg",
+      "width": 102,
+      "height": 37
+    },
+    {
+      "name": "Kwality Wall's",
+      "logo": "/sponsors/kwality-walls-logo.svg",
+      "width": 400,
+      "height": 247
+    }
+  ]
 }

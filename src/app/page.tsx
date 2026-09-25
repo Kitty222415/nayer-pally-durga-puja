@@ -5,6 +5,7 @@ import PujaDays from "@/components/PujaDays";
 import BengaliSchedule from "@/components/BengaliSchedule";
 import Events from "@/components/Events";
 import Visitors from "@/components/Visitors";
+import Testimonials from "@/components/Testimonials";
 import Gallery from "@/components/Gallery";
 import Sponsors from "@/components/Sponsors";
 import Volunteer from "@/components/Volunteer";
@@ -29,6 +30,7 @@ export default function Home() {
         <BengaliSchedule />
         <Events />
         <Visitors />
+        <Testimonials />
         <Gallery />
         <Sponsors />
         <Volunteer />

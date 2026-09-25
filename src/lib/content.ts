@@ -11,6 +11,24 @@ export type GalleryItem = {
   year?: number;
 };
 
+export type Testimonial = {
+  /** true while the card still holds placeholder text — replace with a real quote */
+  placeholder?: boolean;
+  quote: string;
+  name: string;
+  detail?: string;
+  source?: string;
+  sourceUrl?: string;
+};
+
+export type Sponsor = {
+  name: string;
+  logo: string;
+  width: number;
+  height: number;
+  url?: string;
+};
+
 export type YearPack = {
   year: number;
   bengaliYear: string;
@@ -20,6 +38,12 @@ export type YearPack = {
   eventsIntro: string;
   events: { title: string; blurb: string }[];
   visitors: { eyebrow: string; heading: string; body: string };
+  testimonials?: {
+    eyebrow: string;
+    heading: string;
+    intro: string;
+    items: Testimonial[];
+  };
   englishSchedule: {
     eyebrow: string;
     intro: string;
@@ -58,7 +82,10 @@ export const site = siteData as {
   phoneTel: string;
   email: string;
   facebookUrl: string;
+  /** Instagram profile URL — leave "" to hide the Instagram icon */
+  instagram: string;
   heroGreetingBn: string;
+  sponsors: Sponsor[];
 };
 
 const YEAR_PACKS: Record<number, YearPack> = {

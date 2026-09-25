@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getActiveContent } from "@/lib/content";
+import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
 
 export default function Gallery() {
   const { site, year, gallery } = getActiveContent();
@@ -50,14 +51,28 @@ export default function Gallery() {
         </ul>
 
         <div className="mt-10 flex flex-col items-center gap-3 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-3">
           <a
             href={site.facebookUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="focus-ring inline-flex items-center gap-2 rounded-sm border border-crimson/40 bg-crimson px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-cream shadow-md transition hover:bg-crimson-deep"
           >
+            <FacebookIcon className="h-4 w-4" />
             See more on Facebook
           </a>
+          {site.instagram && (
+            <a
+              href={site.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring inline-flex items-center gap-2 rounded-sm border border-crimson px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-crimson transition hover:bg-crimson hover:text-cream"
+            >
+              <InstagramIcon className="h-4 w-4" />
+              Follow on Instagram
+            </a>
+          )}
+          </div>
           <p className="max-w-md text-xs text-muted">
             Send new photos anytime — add them under the active year in{" "}
             <code className="text-navy">src/data/gallery.json</code>.

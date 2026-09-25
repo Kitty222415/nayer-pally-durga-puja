@@ -1,5 +1,11 @@
+import Image from "next/image";
+import { getActiveContent } from "@/lib/content";
+
 export default function Sponsors() {
-  const slots = Array.from({ length: 6 }, (_, i) => i + 1);
+  const { site } = getActiveContent();
+  const sponsors = site.sponsors ?? [];
+  const TOTAL_SLOTS = 6;
+  const openSlots = Math.max(0, TOTAL_SLOTS - sponsors.length);
 
   return (
     <section
@@ -17,17 +23,54 @@ export default function Sponsors() {
             Our Sponsors
           </h2>
           <p className="mt-4 text-sm text-muted md:text-base">
-            Sponsor slots reserved — logos to be added
+            Thank you to the brands who help bring the puja to life every year.
           </p>
         </div>
 
         <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {slots.map((n) => (
+          {sponsors.map((s) => {
+            const tile = (
+              <>
+                <span className="relative block h-20 w-full">
+                  <Image
+                    src={s.logo}
+                    alt={`${s.name} logo`}
+                    fill
+                    unoptimized
+                    sizes="200px"
+                    className="object-contain"
+                  />
+                </span>
+                <span className="sr-only">{s.name}</span>
+              </>
+            );
+            return (
+              <li
+                key={s.name}
+                className="flex h-32 items-center justify-center rounded-sm border border-[#E7DCC9] bg-white px-5 py-4 shadow-sm"
+                title={s.name}
+              >
+                {s.url ? (
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="focus-ring block w-full rounded-sm"
+                  >
+                    {tile}
+                  </a>
+                ) : (
+                  tile
+                )}
+              </li>
+            );
+          })}
+          {Array.from({ length: openSlots }, (_, i) => (
             <li
-              key={n}
-              className="flex h-24 items-center justify-center rounded-sm border border-dashed border-[#C7B79A] px-3 text-center text-xs text-[#9C8B76]"
+              key={`slot-${i}`}
+              className="flex h-32 items-center justify-center rounded-sm border border-dashed border-[#C7B79A] px-3 text-center text-xs text-[#9C8B76]"
             >
-              Sponsor {n}
+              Sponsor slot available
             </li>
           ))}
         </ul>

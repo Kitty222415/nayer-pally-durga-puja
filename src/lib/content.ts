@@ -80,8 +80,6 @@ export const site = siteData as {
   venue: string;
   addressLine: string;
   pin: string;
-  phoneDisplay: string;
-  phoneTel: string;
   email: string;
   facebookUrl: string;
   /** Instagram profile URL — leave "" to hide the Instagram icon */

@@ -11,11 +11,6 @@ export default function Contact() {
     icon?: ReactNode;
   }[] = [
     {
-      href: `tel:${site.phoneTel}`,
-      label: site.phoneDisplay,
-      external: false,
-    },
-    {
       href: `mailto:${site.email}`,
       label: site.email,
       external: false,
@@ -59,7 +54,7 @@ export default function Contact() {
           </p>
         </div>
         <div
-          className={`mt-12 grid gap-4 ${cards.length > 3 ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-3"}`}
+          className={`mt-12 grid gap-4 ${cards.length > 3 ? "sm:grid-cols-2 lg:grid-cols-4" : cards.length === 3 ? "sm:grid-cols-3" : "mx-auto max-w-2xl sm:grid-cols-2"}`}
         >
           {cards.map((card) => (
             <a

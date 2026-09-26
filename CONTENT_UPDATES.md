@@ -15,7 +15,7 @@ The website picks the **active Puja year** automatically:
 | About / anniversary | same file → `about` (+ auto `{anniversary}`) |
 | Events & Visitors copy | same file → `events`, `visitors` |
 | Gallery for that year | `src/data/gallery.json` items with `"year": YYYY` |
-| Phone / email / address | `src/data/site.json` (all years) |
+| Email / address (no phone numbers — committee request) | `src/data/site.json` (all years) |
 
 ## Options to update
 

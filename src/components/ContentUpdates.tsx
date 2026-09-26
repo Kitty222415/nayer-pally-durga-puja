@@ -50,7 +50,7 @@ export default function ContentUpdates() {
               with <code className="rounded bg-soft px-1">&quot;year&quot;: YYYY</code>.
             </li>
             <li>
-              <strong>Phone / email / address:</strong> edit{" "}
+              <strong>Email / address:</strong> edit{" "}
               <code className="rounded bg-soft px-1">src/data/site.json</code>{" "}
               once — used across Contact, Footer and Hero.
             </li>

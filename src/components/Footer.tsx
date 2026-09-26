@@ -108,11 +108,6 @@ export default function Footer() {
             </p>
             <ul className="space-y-2 text-sm leading-relaxed">
               <li>
-                <a href="tel:+919830945325" className="focus-ring rounded-sm hover:text-gold">
-                  +91 98309 45325
-                </a>
-              </li>
-              <li>
                 <a
                   href="mailto:jatioyubasanghasealdah@gmail.com"
                   className="focus-ring break-all rounded-sm hover:text-gold"

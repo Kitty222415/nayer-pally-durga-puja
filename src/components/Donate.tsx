@@ -90,18 +90,11 @@ export default function Donate() {
               ))}
             </dl>
             <p className="mt-5 rounded-sm border-l-2 border-gold bg-soft px-4 py-3 text-sm leading-relaxed text-[#4A3B31]">
-              After donating, please share the payment screenshot with the
-              committee (via the contact number/email on this page) for your
-              receipt.{" "}
-              <span className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-navy">
-                <a href={`tel:${site.phoneTel}`} className="focus-ring rounded-sm font-medium underline decoration-gold/60 underline-offset-2 hover:text-crimson">
-                  {site.phoneDisplay}
-                </a>
-                <span className="hidden text-muted sm:inline" aria-hidden>·</span>
-                <a href={`mailto:${site.email}`} className="focus-ring rounded-sm font-medium break-all underline decoration-gold/60 underline-offset-2 hover:text-crimson">
-                  {site.email}
-                </a>
-              </span>
+              After donating, please email the payment screenshot to{" "}
+              <a href={`mailto:${site.email}`} className="focus-ring rounded-sm font-medium break-all text-navy underline decoration-gold/60 underline-offset-2 hover:text-crimson">
+                {site.email}
+              </a>{" "}
+              for your receipt.
             </p>
           </div>
         </div>

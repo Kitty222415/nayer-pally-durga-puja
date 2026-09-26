@@ -80,6 +80,11 @@ export const site = siteData as {
   venue: string;
   addressLine: string;
   pin: string;
+  /** Pandal coordinates (OpenStreetMap "Sradhananda Park", way 1346388598) — used by the Directions map & buttons */
+  mapLat: number;
+  mapLng: number;
+  /** Place text for the "Open in Google Maps" search link */
+  mapQuery: string;
   email: string;
   /** WhatsApp-only number (country code, digits only, e.g. "91XXXXXXXXXX"). Messages only — never shown as text or used as tel:. */
   whatsappNumber: string;
@@ -163,3 +168,13 @@ export const WHATSAPP_MESSAGES = {
   donation:
     "Namaskar! I have made a donation to Nayer Pally Sealdah Sarbojanin Durga Puja. Sharing the payment screenshot for the receipt. Name: ",
 } as const;
+
+/** Google Maps links for the pandal (no API key needed). */
+export function mapsLinks() {
+  const ll = `${site.mapLat},${site.mapLng}`;
+  return {
+    embed: `https://maps.google.com/maps?q=${ll}&z=16&output=embed`,
+    directions: `https://www.google.com/maps/dir/?api=1&destination=${ll}`,
+    search: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapQuery)}`,
+  };
+}

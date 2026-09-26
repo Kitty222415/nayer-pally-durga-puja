@@ -75,6 +75,11 @@ export default function Footer() {
                   Events &amp; Culture
                 </a>
               </li>
+              <li>
+                <a href="#directions" className="focus-ring rounded-sm hover:text-gold">
+                  Directions
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -131,7 +136,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                Shraddhananda Park, Raja Rammohan Sarani, Sealdah, Kolkata 700009
+                <a
+                  href="#directions"
+                  className="focus-ring rounded-sm hover:text-gold"
+                  title="How to reach the pandal"
+                >
+                  Shraddhananda Park, Raja Rammohan Sarani, Sealdah, Kolkata 700009
+                </a>
               </li>
             </ul>
           </div>

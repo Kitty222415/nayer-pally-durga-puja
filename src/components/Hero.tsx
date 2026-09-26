@@ -65,7 +65,13 @@ export default function Hero() {
             Organised by {site.organiser}
           </p>
           <p className="mt-3 text-sm tracking-wide text-[#E2D8CE] sm:text-base">
-            {site.venue} · {site.addressLine} · PIN {site.pin}
+            <a
+              href="#directions"
+              className="focus-ring rounded-sm underline decoration-gold/40 underline-offset-4 transition hover:text-gold hover:decoration-gold"
+              title="How to reach the pandal"
+            >
+              {site.venue} · {site.addressLine} · PIN {site.pin}
+            </a>
           </p>
           {showingFallback && (
             <p className="mt-4 text-xs text-cream/70">

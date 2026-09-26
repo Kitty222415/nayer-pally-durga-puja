@@ -71,10 +71,13 @@ Gallery images in `public/gallery/` are **manually seeded** from publicly visibl
 
 Header logo: `public/brand/logo.jpeg`.
 
+## Directions / map
+
+The **How to Reach** section (`#directions`, `src/components/Directions.tsx`) uses `mapLat` / `mapLng` / `mapQuery` in `src/data/site.json` (Shraddhananda Park — OpenStreetMap way 1346388598, 22.572362, 88.367273). Google Maps embed + links need no API key.
+
 ## Placeholders (replace with real assets)
 
 - Sponsor logo slots (6)
-- Map embed — add Google Maps / OpenStreetMap pin when exact pandal location is confirmed
 - Exact Durga Puja calendar dates for the current year
 
 ## Notes

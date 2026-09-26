@@ -68,7 +68,13 @@ export default function Contact() {
             Contact
           </h2>
           <p className="mt-4 text-sm text-[#B9AFA3]">
-            {site.venue}, {site.addressLine}, PIN {site.pin}
+            <a
+              href="#directions"
+              className="focus-ring rounded-sm underline decoration-gold/40 underline-offset-4 transition hover:text-gold hover:decoration-gold"
+              title="How to reach the pandal"
+            >
+              {site.venue}, {site.addressLine}, PIN {site.pin}
+            </a>
           </p>
         </div>
         <div

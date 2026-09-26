@@ -10,6 +10,7 @@ const links = [
   { href: "#bangla-nirghanta", label: "বাংলা সূচি" },
   { href: "#events", label: "Events" },
   { href: "#visitors", label: "For Visitors" },
+  { href: "#directions", label: "Directions" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#gallery", label: "Gallery" },
   { href: "#sponsors", label: "Sponsors" },

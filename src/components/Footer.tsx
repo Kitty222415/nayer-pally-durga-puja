@@ -151,7 +151,7 @@ export default function Footer() {
         <p className="mt-12 text-center text-xs text-muted">
           © Jatio Yuba Sangha / Nayer Pally Sealdah Sarbojanin Durga Puja
           Committee. ·{" "}
-          <span className="font-bengali">শারদীয়া শুভেচ্ছা</span>
+          <span className="font-bengali">শুভ শারদীয়া</span>
         </p>
       </div>
     </footer>

@@ -52,7 +52,7 @@ https://nayerpallysealdahsarbojanindurgapuja.com — no `basePath`.
 
 Single-page experience with anchored sections:
 
-1. **Hero** — শুভ দুর্গাপূজা welcome
+1. **Hero** — শারদীয়া শুভেচ্ছা welcome
 2. **About** — committee heritage & organiser
 3. **Puja Days** — Shashthi → Dashami (dates TBA)
 4. **Events & Culture** — including Rath Yatra at Shraddhananda Park
@@ -82,7 +82,7 @@ The **How to Reach** section (`#directions`, `src/components/Directions.tsx`) us
 
 ## Notes
 
-- English is primary; selective Bengali phrases are included (শুভ দুর্গাপূজা, বিজয়া দশমী, etc.).
+- English is primary; selective Bengali phrases are included (শারদীয়া শুভেচ্ছা, বিজয়া দশমী, etc.).
 - No invented member names, sponsors, or exact Pujo dates.
 - Palette: deep vermilion/crimson, antique gold, midnight/royal blue, ivory/cream.
 

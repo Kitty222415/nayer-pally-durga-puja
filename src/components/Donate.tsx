@@ -128,8 +128,8 @@ export default function Donate() {
 
         <div className="mx-auto max-w-3xl">
           <p className="mt-10 text-base leading-relaxed text-[#4A3B31] md:text-[1.05rem] md:leading-[1.8]">
-            For cash or other donations, please reach out to the committee
-            directly using the contact details below.
+            For Puja Seva donations, please reach out to the committee on WhatsApp
+            or by email.
           </p>
           <a
             href="#contact"

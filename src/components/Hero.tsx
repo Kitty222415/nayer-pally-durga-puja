@@ -47,8 +47,19 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container-premium relative z-10 section-pad pt-28 md:pt-32">
+      <div className="container-premium relative z-10 section-pad pt-20 md:pt-32">
         <div className="mx-auto max-w-3xl text-center fade-up">
+          <div className="mx-auto mb-3 flex h-32 w-32 items-center justify-center rounded-full border-2 border-cream/75 bg-navy/35 p-2 shadow-[0_0_24px_rgba(228,199,101,0.5)] backdrop-blur-sm md:hidden">
+            <Image
+              src={asset("/brand/nayer-pally-logo-hd-2026.png")}
+              alt="Nayer Pally Sealdah Sarbojanin Durga Puja — Jatio Yuba Sangha"
+              width={1724}
+              height={1724}
+              quality={100}
+              sizes="128px"
+              className="h-full w-full object-contain"
+            />
+          </div>
           <p className="font-bengali mb-4 text-3xl font-semibold text-gold drop-shadow-md sm:text-4xl md:text-[2.75rem]">
             {site.heroGreetingBn}
           </p>

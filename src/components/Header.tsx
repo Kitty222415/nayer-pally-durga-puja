@@ -48,7 +48,7 @@ export default function Header() {
         <a
           href="#top"
           aria-label="Nayer Pally Sealdah Sarbojanin Durga Puja — Jatio Yuba Sangha"
-          className="group focus-ring flex min-w-0 items-center rounded-sm"
+          className="group focus-ring hidden min-w-0 items-center rounded-sm md:flex"
         >
           <Image
             src={asset("/brand/nayer-pally-logo-hd-2026.png")}
@@ -74,7 +74,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-2">
           <a
             href="#donate"
             className="focus-ring hidden rounded-sm bg-gold px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy transition hover:brightness-110 sm:inline-flex"

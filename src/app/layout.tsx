@@ -24,7 +24,7 @@ const notoBengali = Noto_Sans_Bengali({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kitty222415.github.io/nayer-pally-durga-puja"),
+  metadataBase: new URL("https://nayerpallysealdahsarbojanindurgapuja.com"),
   title: {
     default:
       "Nayer Pally Sealdah Sarbojanin Durga Puja Committee - Jatio Yuba Sangha",

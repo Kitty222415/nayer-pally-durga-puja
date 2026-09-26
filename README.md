@@ -4,6 +4,8 @@ Official website for **Nayer Pally Sealdah Sarbojanin Durga Puja Committee – J
 
 A premium, editorial festival site celebrating Durga Puja and community culture in Sealdah, Kolkata (PIN 700009).
 
+**Live site:** https://nayerpallysealdahsarbojanindurgapuja.com
+
 ## Branding
 
 | Field | Value |
@@ -37,6 +39,14 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 npm start
 ```
+
+### Deployment (GitHub Pages, custom domain)
+
+The site is a static export (`output: "export"`) served at the root of
+https://nayerpallysealdahsarbojanindurgapuja.com — no `basePath`.
+`npm run build` writes `out/`, which includes `CNAME` and `.nojekyll` from
+`public/`. The contents of `out/` are pushed to the `gh-pages` branch
+(Pages source = `gh-pages` branch, custom domain set in the repo Pages settings).
 
 ## Site sections
 

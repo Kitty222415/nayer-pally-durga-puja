@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
-// GitHub Pages serves this project site under /nayer-pally-durga-puja.
-// Override with NEXT_PUBLIC_BASE_PATH="" for a root-hosted build.
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/nayer-pally-durga-puja";
+// Served at the root of the custom domain
+// https://nayerpallysealdahsarbojanindurgapuja.com (GitHub Pages + public/CNAME).
+// No basePath/assetPrefix. Set NEXT_PUBLIC_BASE_PATH (e.g. "/sub") only for a
+// sub-path-hosted build.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 process.env.NEXT_PUBLIC_BASE_PATH = basePath;
 
 const nextConfig: NextConfig = {

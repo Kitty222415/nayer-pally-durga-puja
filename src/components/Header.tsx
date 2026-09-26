@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { useEffect, useState } from "react";
 
 const links = [
@@ -45,7 +46,7 @@ export default function Header() {
       <div className="container-premium flex items-center justify-between gap-3 px-5 py-3 md:py-3.5">
         <a href="#top" className="group focus-ring flex min-w-0 items-center gap-3 rounded-sm">
           <Image
-            src="/brand/nayer-pally-logo-hd-2026.png"
+            src={asset("/brand/nayer-pally-logo-hd-2026.png")}
             alt="Nayer Pally Sealdah Sarbojanin Durga Puja Committee logo"
             width={1724}
             height={1724}

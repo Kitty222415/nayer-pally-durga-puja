@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { getActiveContent } from "@/lib/content";
 import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
 
@@ -34,7 +35,7 @@ export default function Gallery() {
             <li key={item.file}>
               <figure className="group relative aspect-[4/3] overflow-hidden rounded-sm border border-parchment bg-navy/5">
                 <Image
-                  src={item.src}
+                  src={asset(item.src)}
                   alt={item.alt}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"

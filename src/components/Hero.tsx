@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { getActiveContent, fillTemplate } from "@/lib/content";
 
 export default function Hero() {
@@ -19,7 +20,7 @@ export default function Hero() {
       {/* Soft full-bleed backdrop — the pandal photo you shared */}
       <div className="absolute inset-0">
         <Image
-          src="/brand/maa-durga-hero-v2.jpg"
+          src={asset("/brand/maa-durga-hero-v2.jpg")}
           alt=""
           fill
           priority

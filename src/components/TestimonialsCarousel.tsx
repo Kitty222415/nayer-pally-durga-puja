@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Testimonial } from "@/lib/content";
 
@@ -134,7 +135,7 @@ export default function TestimonialsCarousel({ items }: { items: Testimonial[] }
               <div className="flex items-center gap-4">
                 <span className="relative block h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-gold/70 ring-offset-2 ring-offset-navy">
                   <Image
-                    src={item.photo || FALLBACK_AVATAR}
+                    src={asset(item.photo || FALLBACK_AVATAR)}
                     alt={item.placeholder ? "" : `Photo of ${item.name}`}
                     fill
                     sizes="64px"

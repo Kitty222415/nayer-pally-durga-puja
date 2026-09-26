@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { getActiveContent } from "@/lib/content";
 import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
 
@@ -10,7 +11,7 @@ export default function Footer() {
         <div className="flex flex-col gap-6 border-b border-gold/20 pb-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="/brand/nayer-pally-logo-hd-2026.png"
+              src={asset("/brand/nayer-pally-logo-hd-2026.png")}
               alt=""
               width={1724}
               height={1724}

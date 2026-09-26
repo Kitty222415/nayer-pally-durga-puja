@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { getActiveContent } from "@/lib/content";
 
 export default function Sponsors() {
@@ -33,7 +34,7 @@ export default function Sponsors() {
               <>
                 <span className="relative block h-20 w-full">
                   <Image
-                    src={s.logo}
+                    src={asset(s.logo)}
                     alt={`${s.name} logo`}
                     fill
                     unoptimized

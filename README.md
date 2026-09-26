@@ -73,7 +73,7 @@ Header logo: `public/brand/logo.jpeg`.
 
 ## Directions / map
 
-The **How to Reach** section (`#directions`, `src/components/Directions.tsx`) uses `mapLat` / `mapLng` / `mapQuery` in `src/data/site.json` (Shraddhananda Park — OpenStreetMap way 1346388598, 22.572362, 88.367273). Google Maps embed + links need no API key.
+The **How to Reach** section (`#directions`, `src/components/Directions.tsx`) uses `mapLat` / `mapLng` / `mapQuery` in `src/data/site.json` (Shraddhananda Park — OpenStreetMap way 1346388598, 22.572221, 88.366863). Google Maps embed + links need no API key.
 
 ## Placeholders (replace with real assets)
 

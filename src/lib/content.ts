@@ -92,7 +92,7 @@ export const site = siteData as {
   /** Pandal coordinates (OpenStreetMap "Sradhananda Park", way 1346388598) — used by the Directions map & buttons */
   mapLat: number;
   mapLng: number;
-  /** Place text for the "Open in Google Maps" search link */
+  /** Coordinate query for the "Open in Google Maps" search link */
   mapQuery: string;
   email: string;
   /** WhatsApp-only number (country code, digits only, e.g. "91XXXXXXXXXX"). Messages only — never shown as text or used as tel:. */
@@ -184,6 +184,6 @@ export function mapsLinks() {
   return {
     embed: `https://maps.google.com/maps?q=${ll}&z=16&output=embed`,
     directions: `https://www.google.com/maps/dir/?api=1&destination=${ll}`,
-    search: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapQuery)}`,
+    search: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ll)}`,
   };
 }

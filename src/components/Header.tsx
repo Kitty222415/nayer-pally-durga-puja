@@ -45,25 +45,21 @@ export default function Header() {
       }`}
     >
       <div className="container-premium flex items-center justify-between gap-3 px-5 py-3 md:py-3.5">
-        <a href="#top" className="group focus-ring flex min-w-0 items-center gap-3 rounded-sm">
+        <a
+          href="#top"
+          aria-label="Nayer Pally Sealdah Sarbojanin Durga Puja — Jatio Yuba Sangha"
+          className="group focus-ring flex min-w-0 items-center rounded-sm"
+        >
           <Image
             src={asset("/brand/nayer-pally-logo-hd-2026.png")}
-            alt="Nayer Pally Sealdah Sarbojanin Durga Puja Committee logo"
+            alt="Nayer Pally Sealdah Sarbojanin Durga Puja — Jatio Yuba Sangha"
             width={1724}
             height={1724}
             priority
             quality={100}
-            sizes="(min-width: 768px) 56px, 44px"
-            className="h-11 w-11 shrink-0 object-contain md:h-14 md:w-14"
+            sizes="(min-width: 768px) 64px, 48px"
+            className="h-12 w-12 shrink-0 object-contain md:h-16 md:w-16"
           />
-          <span className="min-w-0 xl:hidden">
-            <span className="font-display block truncate text-sm font-semibold tracking-wide text-cream md:text-base">
-              Nayer Pally Sealdah
-            </span>
-            <span className="block truncate text-[10px] uppercase tracking-[0.18em] text-gold/90 md:text-[11px]">
-              Jatio Yuba Sangha
-            </span>
-          </span>
         </a>
 
         <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">

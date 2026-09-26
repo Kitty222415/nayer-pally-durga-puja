@@ -10,7 +10,7 @@ import {
 export default function Footer() {
   const { site } = getActiveContent();
   return (
-    <footer className="bg-footer text-[#B9AFA3]">
+    <footer className="bg-footer pb-[calc(4.5rem+env(safe-area-inset-bottom))] text-[#B9AFA3] md:pb-0">
       <div className="container-premium section-pad !py-14 md:!py-16">
         <div className="flex flex-col gap-6 border-b border-gold/20 pb-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">

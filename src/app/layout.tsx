@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Outfit, Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default function RootLayout({
         className={`${cormorant.variable} ${outfit.variable} ${notoBengali.variable} antialiased`}
       >
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );

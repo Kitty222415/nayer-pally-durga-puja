@@ -81,6 +81,8 @@ export const site = siteData as {
   addressLine: string;
   pin: string;
   email: string;
+  /** WhatsApp-only number (country code, digits only, e.g. "91XXXXXXXXXX"). Messages only — never shown as text or used as tel:. */
+  whatsappNumber: string;
   facebookUrl: string;
   /** Instagram profile URL — leave "" to hide the Instagram icon */
   instagram: string;
@@ -148,3 +150,16 @@ export function getActiveContent(now = new Date()) {
     gallery: tagged.length ? tagged : (galleryAll as GalleryItem[]),
   };
 }
+
+/** Build a wa.me chat link for the committee's WhatsApp-only number with an optional prefilled message. */
+export function whatsappLink(message?: string): string {
+  const base = `https://wa.me/${site.whatsappNumber.replace(/\D/g, "")}`;
+  return message ? `${base}?text=${encodeURIComponent(message)}` : base;
+}
+
+export const WHATSAPP_MESSAGES = {
+  general:
+    "Namaskar! I have a question about Nayer Pally Sealdah Sarbojanin Durga Puja.",
+  donation:
+    "Namaskar! I have made a donation to Nayer Pally Sealdah Sarbojanin Durga Puja. Sharing the payment screenshot for the receipt. Name: ",
+} as const;

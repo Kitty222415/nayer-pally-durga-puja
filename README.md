@@ -15,6 +15,7 @@ A premium, editorial festival site celebrating Durga Puja and community culture 
 | Location | Nayer Pally / Sealdah, Kolkata, West Bengal, India — PIN 700009 |
 | Venue | Shraddhananda Park (Sradhananda Park) |
 | Email | jatioyubasanghasealdah@gmail.com |
+| WhatsApp (messages only) | [Chat on WhatsApp](https://wa.me/918100143705) — no calls please; number stored once as `whatsappNumber` in `src/data/site.json` (never shown as text, no `tel:` links) |
 | Facebook | [facebook.com/profile.php?id=100083116423356](https://www.facebook.com/profile.php?id=100083116423356) |
 
 ## Tech stack
@@ -58,8 +59,8 @@ Single-page experience with anchored sections:
 5. **Gallery** — seeded Facebook photos (see `src/data/gallery.json`)
 6. **Sponsors** — reserved sponsor slots
 7. **Volunteer** — seva call-to-action
-8. **Donate / Anjali** — UPI/bank transfer; receipts via email (no payment gateway)
-9. **Contact** — email, Facebook, location (no phone numbers by committee request)
+8. **Donate / Anjali** — UPI/bank transfer; receipts via WhatsApp or email (no payment gateway)
+9. **Contact** — email, WhatsApp chat (messages only, number never displayed), Facebook, location (no phone numbers / tel: links by committee request)
 10. **Footer**
 
 ## Gallery (Facebook photos)

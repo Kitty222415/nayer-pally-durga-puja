@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { asset } from "@/lib/asset";
-import { getActiveContent } from "@/lib/content";
-import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
+import { getActiveContent, whatsappLink, WHATSAPP_MESSAGES } from "@/lib/content";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  WhatsAppIcon,
+} from "@/components/SocialIcons";
 
 export default function Footer() {
   const { site } = getActiveContent();
@@ -113,6 +117,17 @@ export default function Footer() {
                   className="focus-ring break-all rounded-sm hover:text-gold"
                 >
                   jatioyubasanghasealdah@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href={whatsappLink(WHATSAPP_MESSAGES.general)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-ring inline-flex items-center gap-2 rounded-sm hover:text-gold"
+                >
+                  <WhatsAppIcon className="h-4 w-4 text-[#25D366]" />
+                  WhatsApp (message only)
                 </a>
               </li>
               <li>

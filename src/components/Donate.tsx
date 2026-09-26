@@ -1,4 +1,9 @@
-import { getActiveContent } from "@/lib/content";
+import {
+  getActiveContent,
+  whatsappLink,
+  WHATSAPP_MESSAGES,
+} from "@/lib/content";
+import { WhatsAppIcon } from "@/components/SocialIcons";
 import CopyButton from "@/components/CopyButton";
 
 /** Committee bank account (from the committee's PNB passbook). */
@@ -89,13 +94,35 @@ export default function Donate() {
                 </div>
               ))}
             </dl>
-            <p className="mt-5 rounded-sm border-l-2 border-gold bg-soft px-4 py-3 text-sm leading-relaxed text-[#4A3B31]">
-              After donating, please email the payment screenshot to{" "}
-              <a href={`mailto:${site.email}`} className="focus-ring rounded-sm font-medium break-all text-navy underline decoration-gold/60 underline-offset-2 hover:text-crimson">
-                {site.email}
-              </a>{" "}
-              for your receipt.
-            </p>
+            <div className="mt-5 rounded-sm border-l-2 border-gold bg-soft px-4 py-3 text-sm leading-relaxed text-[#4A3B31]">
+              <p>
+                After donating, please send the payment screenshot on WhatsApp
+                or email it to{" "}
+                <a href={`mailto:${site.email}`} className="focus-ring rounded-sm font-medium break-all text-navy underline decoration-gold/60 underline-offset-2 hover:text-crimson">
+                  {site.email}
+                </a>{" "}
+                for your receipt.
+              </p>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <a
+                  href={whatsappLink(WHATSAPP_MESSAGES.donation)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Send payment screenshot on WhatsApp (messages only)"
+                  className="focus-ring inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-xs font-semibold tracking-wide text-white shadow-sm transition hover:bg-[#1EBE5A]"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                  Chat on WhatsApp
+                </a>
+                <a
+                  href={`mailto:${site.email}?subject=${encodeURIComponent("Donation receipt — Nayer Pally Sealdah Sarbojanin Durga Puja")}`}
+                  className="focus-ring inline-flex items-center gap-2 rounded-full border border-navy/25 px-4 py-2 text-xs font-semibold tracking-wide text-navy transition hover:border-navy/50"
+                >
+                  Email screenshot
+                </a>
+                <span className="text-xs text-muted">WhatsApp messages only — no calls</span>
+              </div>
+            </div>
           </div>
         </div>
 

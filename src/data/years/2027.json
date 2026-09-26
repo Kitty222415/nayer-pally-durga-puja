@@ -38,56 +38,38 @@
     "intro": "Words from devotees, neighbours and guests who have celebrated with us.",
     "items": [
       {
-        "placeholder": true,
-        "photo": "/testimonials/placeholder-avatar.svg",
-        "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name 1",
-        "detail": "City / relation to the puja",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "placeholder": true,
-        "photo": "/testimonials/placeholder-avatar.svg",
-        "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name 2",
-        "detail": "City / relation to the puja",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "placeholder": true,
-        "photo": "/testimonials/placeholder-avatar.svg",
-        "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name 3",
-        "detail": "City / relation to the puja",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "placeholder": true,
-        "photo": "/testimonials/placeholder-avatar.svg",
-        "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name 4",
-        "detail": "City / relation to the puja",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "placeholder": true,
-        "photo": "/testimonials/placeholder-avatar.svg",
-        "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name 5",
-        "detail": "City / relation to the puja",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "placeholder": true,
-        "photo": "/testimonials/placeholder-avatar.svg",
-        "quote": "Your testimonial here — replace with a real quote",
-        "name": "Visitor name 6",
-        "detail": "City / relation to the puja",
+        "placeholder": false,
+        "photo": "/testimonials/bikram.jpg",
+        "quote": "A non-negotiable spot on our mandatory Pujo itinerary every single year.",
+        "body": {
+          "intro": [
+            "For those of us flying back to Kolkata from the Middle East for Durga Pujo, the city’s festive energy is electric, but navigation can sometimes feel overwhelming. That is precisely why Nayer Pally Durga Puja in Sealdah has earned a non-negotiable spot on our mandatory Pujo itinerary every single year.",
+            "What makes Nayer Pally truly special is how seamlessly it blends high-caliber festive artistry with effortless accessibility."
+          ],
+          "points": [
+            {
+              "label": "Thoughtful Theme Artistry",
+              "text": "Year after year, the organizers craft deeply creative, visually stunning themes that captivate you the moment you step into the venue. The attention to detail and artistic execution never fail to leave an impression."
+            },
+            {
+              "label": "Flawless Crowd Management",
+              "text": "Navigating Pujo crowds with family can be daunting, but Nayer Pally shines when it comes to visitor comfort. The layout and movement are exceptionally well managed, allowing you to absorb the beauty of the pandal and the Pratima without feeling rushed or overwhelmed."
+            },
+            {
+              "label": "A Feast for Kolkata Street Food Lovers",
+              "text": "Right around the pandal, the food stalls serve up the ultimate Kolkata street food experience. Their wok-tossed Kolkata-style noodles and smoky, succulent kebabs are absolute standouts—flavor-packed, nostalgic, and worth the trip alone."
+            },
+            {
+              "label": "Family-Friendly Vibes",
+              "text": "Tucked right behind the main pandal is a dedicated play area for kids—a rare and thoughtful addition that makes the location an absolute joy for families traveling with young children."
+            }
+          ],
+          "closing": [
+            "Nayer Pally isn’t just another pandal stop; it embodies the true spirit of Kolkata’s hospitality—vibrant, organized, delicious, and welcoming to everyone returning home for the festival."
+          ]
+        },
+        "name": "Bikram",
+        "detail": "Dubai",
         "source": "",
         "sourceUrl": ""
       }

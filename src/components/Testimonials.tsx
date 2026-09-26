@@ -1,5 +1,6 @@
 import { getActiveContent } from "@/lib/content";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import { FeaturedTestimonial } from "@/components/TestimonialCard";
 
 export default function Testimonials() {
   const { pack } = getActiveContent();
@@ -31,7 +32,11 @@ export default function Testimonials() {
           )}
         </div>
 
-        <TestimonialsCarousel items={t.items} />
+        {t.items.length === 1 ? (
+          <FeaturedTestimonial item={t.items[0]} />
+        ) : (
+          <TestimonialsCarousel items={t.items} />
+        )}
       </div>
     </section>
   );

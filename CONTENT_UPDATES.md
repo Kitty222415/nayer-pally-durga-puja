@@ -28,7 +28,7 @@ Until a new year is `published`, the site keeps showing the latest published yea
 
 ## Adding a testimonial (with photo)
 
-Testimonials live in `src/data/years/YYYY.json` → `testimonials.items` and scroll automatically in a carousel (add as many as you like).
+Testimonials live in `src/data/years/YYYY.json` → `testimonials.items` — one testimonial shows as a featured card; two or more scroll automatically in a carousel (add as many as you like).
 
 1. Put the person's photo (square works best, e.g. 400×400 JPG/PNG) in `public/testimonials/`, e.g. `public/testimonials/rina-das.jpg`. Only use a photo the person has agreed to share.
 2. Replace one of the placeholder items (or add a new one) like this:
@@ -46,5 +46,8 @@ Testimonials live in `src/data/years/YYYY.json` → `testimonials.items` and scr
 ```
 
 - Leave `"photo": ""` to show the generic avatar instead.
+- For a long review, keep `quote` as a short pull-quote headline (in their words) and put the full text in an optional `body`:
+  `"body": { "intro": ["paragraph", "..."], "points": [{ "label": "Bold label", "text": "..." }], "closing": ["paragraph"] }`.
+  With a single testimonial the section shows one centred, featured card with the full text; with several it becomes a carousel and each long review gets a “Read full review” toggle (plain HTML `<details>`, works without JS).
 - `source` / `sourceUrl` are optional; remove all items with `"placeholder": true` once real quotes are in.
 - Only publish real quotes from real people, with their permission.

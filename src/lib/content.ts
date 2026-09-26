@@ -11,12 +11,21 @@ export type GalleryItem = {
   year?: number;
 };
 
+export type TestimonialBody = {
+  intro?: string[];
+  points?: { label: string; text: string }[];
+  closing?: string[];
+};
+
 export type Testimonial = {
   /** true while the card still holds placeholder text — replace with a real quote */
   placeholder?: boolean;
   /** Photo path under public/testimonials/ (e.g. "/testimonials/rina-das.jpg"). Empty → generic avatar. */
   photo?: string;
+  /** Short quote (or pull-quote headline when `body` holds the full text). */
   quote: string;
+  /** Optional long-form testimonial: intro paragraphs, bold-labelled points, closing paragraphs. */
+  body?: TestimonialBody;
   name: string;
   detail?: string;
   source?: string;

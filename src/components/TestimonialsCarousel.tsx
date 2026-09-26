@@ -1,11 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import { asset } from "@/lib/asset";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Testimonial } from "@/lib/content";
+import { Avatar, QuoteMark, TestimonialBodyContent } from "@/components/TestimonialCard";
 
-const FALLBACK_AVATAR = "/testimonials/placeholder-avatar.svg";
 const AUTO_ADVANCE_MS = 4500;
 const RESUME_AFTER_TOUCH_MS = 6000;
 
@@ -133,24 +131,8 @@ export default function TestimonialsCarousel({ items }: { items: Testimonial[] }
                 </span>
               )}
               <div className="flex items-center gap-4">
-                <span className="relative block h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-gold/70 ring-offset-2 ring-offset-navy">
-                  <Image
-                    src={asset(item.photo || FALLBACK_AVATAR)}
-                    alt={item.placeholder ? "" : `Photo of ${item.name}`}
-                    fill
-                    sizes="64px"
-                    unoptimized={(item.photo || FALLBACK_AVATAR).endsWith(".svg")}
-                    className="object-cover"
-                  />
-                </span>
-                <svg
-                  viewBox="0 0 32 24"
-                  className="h-5 w-7 text-gold"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M0 24V14.4C0 6.4 4.3 1.6 12.8 0l1.4 3.1C9.6 4.5 7.4 7.3 7.1 11.2H13V24H0zm18.3 0V14.4C18.3 6.4 22.6 1.6 31.1 0l1.4 3.1c-4.6 1.4-6.8 4.2-7.1 8.1h5.9V24H18.3z" />
-                </svg>
+                <Avatar item={item} size="sm" />
+                <QuoteMark />
               </div>
               <blockquote
                 className={`font-display mt-5 flex-1 text-lg leading-relaxed md:text-xl ${
@@ -159,6 +141,17 @@ export default function TestimonialsCarousel({ items }: { items: Testimonial[] }
               >
                 {item.quote}
               </blockquote>
+              {item.body && (
+                <details className="group mt-4">
+                  <summary className="focus-ring cursor-pointer list-none rounded-sm text-xs font-semibold uppercase tracking-[0.14em] text-gold hover:underline [&::-webkit-details-marker]:hidden">
+                    <span className="group-open:hidden">Read full review</span>
+                    <span className="hidden group-open:inline">Show less</span>
+                  </summary>
+                  <div className="mt-4">
+                    <TestimonialBodyContent body={item.body} />
+                  </div>
+                </details>
+              )}
               <figcaption className="mt-6 border-t border-gold/20 pt-4">
                 <p className="text-sm font-semibold tracking-wide text-gold">{item.name}</p>
                 {item.detail && (

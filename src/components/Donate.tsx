@@ -63,37 +63,63 @@ export default function Donate() {
             aria-labelledby="bank-transfer-heading"
             role="group"
           >
-            <p className="eyebrow mb-2 text-gold-antique">Direct to Committee Account</p>
-            <h3
-              id="bank-transfer-heading"
-              className="font-display text-xl font-semibold text-navy md:text-2xl"
-            >
-              Bank Transfer (NEFT / IMPS / RTGS)
-            </h3>
-            <dl className="mt-6 divide-y divide-navy/10 border-y border-navy/10">
-              {rows.map((r) => (
-                <div
-                  key={r.label}
-                  className="flex flex-col gap-1 py-3.5 sm:flex-row sm:items-center sm:gap-4"
+            <details className="donate-details group">
+              <summary
+                className="focus-ring -m-2 flex cursor-pointer list-none items-center justify-between gap-4 rounded-sm p-2 [&::-webkit-details-marker]:hidden"
+                aria-describedby="bank-transfer-hint"
+              >
+                <span className="min-w-0">
+                  <span className="eyebrow mb-2 block text-gold-antique">Direct to Committee Account</span>
+                  <span
+                    id="bank-transfer-heading"
+                    role="heading"
+                    aria-level={3}
+                    className="block font-display text-xl font-semibold text-navy md:text-2xl"
+                  >
+                    Bank Transfer (NEFT / IMPS / RTGS)
+                  </span>
+                  <span
+                    id="bank-transfer-hint"
+                    className="mt-2 inline-block text-xs font-semibold uppercase tracking-[0.14em] text-navy/70 underline decoration-gold/60 underline-offset-4 group-hover:text-crimson"
+                  >
+                    <span className="group-open:hidden">Show bank details</span>
+                    <span className="hidden group-open:inline">Hide bank details</span>
+                  </span>
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold/60 bg-soft text-gold-antique transition-transform duration-300 group-open:rotate-180 group-hover:border-gold"
                 >
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted sm:w-40 sm:shrink-0">
-                    {r.label}
-                  </dt>
-                  <dd className="flex min-w-0 flex-1 items-center justify-between gap-3">
-                    <span
-                      className={`min-w-0 break-words text-navy ${
-                        r.mono
-                          ? "font-mono text-base font-semibold tracking-wider md:text-lg"
-                          : "text-sm font-medium md:text-base"
-                      }`}
-                    >
-                      {r.value}
-                    </span>
-                    {r.copy && <CopyButton value={r.value} label={r.label} />}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </summary>
+              <dl className="mt-6 divide-y divide-navy/10 border-y border-navy/10">
+                {rows.map((r) => (
+                  <div
+                    key={r.label}
+                    className="flex flex-col gap-1 py-3.5 sm:flex-row sm:items-center sm:gap-4"
+                  >
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted sm:w-40 sm:shrink-0">
+                      {r.label}
+                    </dt>
+                    <dd className="flex min-w-0 flex-1 items-center justify-between gap-3">
+                      <span
+                        className={`min-w-0 break-words text-navy ${
+                          r.mono
+                            ? "font-mono text-base font-semibold tracking-wider md:text-lg"
+                            : "text-sm font-medium md:text-base"
+                        }`}
+                      >
+                        {r.value}
+                      </span>
+                      {r.copy && <CopyButton value={r.value} label={r.label} />}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </details>
             <div className="mt-5 rounded-sm border-l-2 border-gold bg-soft px-4 py-3 text-sm leading-relaxed text-[#4A3B31]">
               <p>
                 After donating, please send the payment screenshot on WhatsApp

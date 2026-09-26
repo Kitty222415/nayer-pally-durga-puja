@@ -139,3 +139,8 @@ body {
 .testimonial-track::-webkit-scrollbar {
   display: none;
 }
+
+/* Donate: collapsible bank details (native <details>, custom chevron) */
+.donate-details > summary { list-style: none; }
+.donate-details > summary::-webkit-details-marker { display: none; }
+.donate-details > summary::marker { content: ""; }

@@ -1,9 +1,4 @@
-import {
-  getActiveContent,
-  whatsappLink,
-  WHATSAPP_MESSAGES,
-} from "@/lib/content";
-import { WhatsAppIcon } from "@/components/SocialIcons";
+import { getActiveContent } from "@/lib/content";
 import CopyButton from "@/components/CopyButton";
 
 /** Committee bank account (from the committee's PNB passbook). */
@@ -122,8 +117,7 @@ export default function Donate() {
             </details>
             <div className="mt-5 rounded-sm border-l-2 border-gold bg-soft px-4 py-3 text-sm leading-relaxed text-[#4A3B31]">
               <p>
-                After donating, please send the payment screenshot on WhatsApp
-                or email it to{" "}
+                After donating, please email the payment screenshot to{" "}
                 <a href={`mailto:${site.email}`} className="focus-ring rounded-sm font-medium break-all text-navy underline decoration-gold/60 underline-offset-2 hover:text-crimson">
                   {site.email}
                 </a>{" "}
@@ -131,22 +125,11 @@ export default function Donate() {
               </p>
               <div className="mt-3 flex flex-wrap items-center gap-3">
                 <a
-                  href={whatsappLink(WHATSAPP_MESSAGES.donation)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Send payment screenshot on WhatsApp (messages only)"
-                  className="focus-ring inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-xs font-semibold tracking-wide text-white shadow-sm transition hover:bg-[#1EBE5A]"
-                >
-                  <WhatsAppIcon className="h-4 w-4" />
-                  Chat on WhatsApp
-                </a>
-                <a
                   href={`mailto:${site.email}?subject=${encodeURIComponent("Donation receipt — Nayer Pally Sealdah Sarbojanin Durga Puja")}`}
-                  className="focus-ring inline-flex items-center gap-2 rounded-full border border-navy/25 px-4 py-2 text-xs font-semibold tracking-wide text-navy transition hover:border-navy/50"
+                  className="focus-ring inline-flex items-center gap-2 rounded-full bg-navy px-4 py-2 text-xs font-semibold tracking-wide text-cream shadow-sm transition hover:brightness-110"
                 >
                   Email screenshot
                 </a>
-                <span className="text-xs text-muted">WhatsApp messages only — no calls</span>
               </div>
             </div>
           </div>
@@ -154,8 +137,7 @@ export default function Donate() {
 
         <div className="mx-auto max-w-3xl">
           <p className="mt-10 text-base leading-relaxed text-[#4A3B31] md:text-[1.05rem] md:leading-[1.8]">
-            For Puja Seva donations, please reach out to the committee on WhatsApp
-            or by email.
+            For Puja Seva donations, please reach out to the committee by email.
           </p>
           <a
             href="#contact"

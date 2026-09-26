@@ -114,7 +114,7 @@ export default function TestimonialsCarousel({ items }: { items: Testimonial[] }
       <ul
         ref={trackRef}
         tabIndex={0}
-        className="testimonial-track flex snap-x snap-mandatory gap-6 overflow-x-auto overscroll-x-contain scroll-smooth pb-2 focus:outline-none motion-reduce:scroll-auto"
+        className="testimonial-track flex has-[details[open]]:items-start snap-x snap-mandatory gap-6 overflow-x-auto overscroll-x-contain scroll-smooth pb-2 focus:outline-none motion-reduce:scroll-auto"
       >
         {items.map((item, i) => (
           <li
@@ -122,7 +122,9 @@ export default function TestimonialsCarousel({ items }: { items: Testimonial[] }
             data-card
             aria-roledescription="slide"
             aria-label={`${i + 1} of ${items.length}`}
-            className="w-full shrink-0 snap-start md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]"
+            className={`w-full shrink-0 snap-start md:w-[calc((100%-1.5rem)/2)] ${
+              items.length > 2 ? "lg:w-[calc((100%-3rem)/3)]" : ""
+            }`}
           >
             <figure className="relative flex h-full flex-col rounded-sm border border-gold/30 bg-cream/[0.04] p-7 shadow-lg shadow-black/20 transition hover:border-gold/60">
               {item.placeholder && (
@@ -179,7 +181,11 @@ export default function TestimonialsCarousel({ items }: { items: Testimonial[] }
       </ul>
 
       {items.length > 1 && (
-        <div className="mt-8 flex items-center justify-center gap-5">
+        <div
+          className={`mt-8 flex items-center justify-center gap-5 ${
+            items.length === 2 ? "md:hidden" : items.length === 3 ? "lg:hidden" : ""
+          }`}
+        >
           <button type="button" className={arrowCls} aria-label="Previous testimonial" onClick={() => manual(-1)}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path d="M15 5l-7 7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
